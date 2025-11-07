@@ -6,62 +6,62 @@ export default function FAQ() {
     {
       question: "What is Colorado BPS and when does it take effect?",
       answer:
-        "Colorado Building Performance Standard (BPS) is a state law (HB 21-1286, passed in 2021) requiring commercial and institutional buildings to meet energy performance standards or report energy use data. It takes effect January 1, 2025, with first compliance deadlines in 2028-2030 depending on building type and size.",
+        "Colorado Building Performance Standard (BPS) is a state law (HB 21-1286, passed in 2021) requiring buildings ≥50,000 sq ft to benchmark energy use annually and meet performance targets through one of three compliance pathways. Benchmarking enforcement began January 1, 2024. Critical deadline: December 31, 2025 for energy audit + compliance plan + pathway selection.",
     },
     {
-      question: "What's the difference between Tier 1 and Tier 2?",
+      question: "Which buildings are covered?",
       answer:
-        "Tier 1 covers commercial buildings ≥35,000 sq ft and must meet Energy Use Intensity (EUI) performance targets by June 2028-2030 (based on size). Penalties apply: $5,000 + $1/sq ft annually until compliant. Tier 2 covers commercial buildings 20-35k sq ft and ALL institutional buildings ≥35k sq ft. Tier 2 is reporting-only—NO performance targets, NO penalties. Just benchmark and report energy data by July 2028.",
+        "All buildings ≥50,000 sq ft are covered, regardless of type—commercial, institutional, residential (multifamily), government buildings, etc. There is a single threshold with no tier structure. Buildings must benchmark annually (August 1 deadline) and meet performance targets by December 31, 2026 (interim) and December 31, 2030 (final).",
     },
     {
-      question: "What are institutional buildings and why are they Tier 2?",
+      question: "What are the three compliance pathways?",
       answer:
-        "Institutional buildings include schools, colleges, hospitals, government buildings, libraries, and community centers. Oregon designated ALL institutional buildings ≥35,000 sq ft as Tier 2 regardless of size, recognizing public entities face different budget constraints. This means a 200,000 sq ft school only reports energy data—no performance requirements, no penalties.",
+        "Colorado offers three pathways: (1) Energy Efficiency - reduce Site EUI by 7% (2026) and 20% (2030); (2) GHG Reduction - reduce greenhouse gas emissions by 7% (2026) and 20% (2030); (3) Standard % Reduction - fixed 13% (interim) and 29% (final) reductions, available only if 2021 baseline EUI is 29%+ above target. You must select a pathway by December 31, 2025, but can change it in future cycles.",
     },
     {
-      question: "How do I know my building's EUI and EUIt?",
+      question: "How do I benchmark my building?",
       answer:
-        "EUI (Energy Use Intensity) is your building's actual energy consumption measured in kBtu per square foot per year, calculated using 12 months of utility bills in EPA's ENERGY STAR Portfolio Manager. EUIt (Energy Use Intensity Target) is Oregon's performance target for your building type, set by Colorado Energy Office based on median or better performance. If your EUI is less than or equal to your EUIt, you comply. If EUI exceeds EUIt, you must implement energy improvements.",
+        "Use EPA's ENERGY STAR Portfolio Manager to track energy use. Input 12 months of utility data (electricity, natural gas, etc.) to calculate your building's Site EUI (kBtu/sq ft/year). Connect Portfolio Manager to Colorado's BEAM Portal via Web Services, then submit annual benchmarking report + $100 fee by August 1 each year. Benchmarking is required regardless of which compliance pathway you choose.",
     },
     {
-      question: "What happens if my building doesn't meet the EUIt target?",
+      question: "What is the 2021 baseline and why does it matter?",
       answer:
-        "For Tier 1 buildings: You must complete an ASHRAE Level 2 energy audit to identify efficiency improvements (ECMs - Energy Conservation Measures), then implement those improvements to reduce your EUI below your EUIt. You can apply for ECAPP ($2M state fund) and BERI ($12M federal grants) to offset costs. If you don't achieve compliance by your deadline, penalties of $5,000 + $1/sq ft apply annually until you comply. For Tier 2 buildings: This doesn't apply—you only report data, no performance targets required.",
+        "Your 2021 baseline is your building's energy use or GHG emissions from calendar year 2021. This baseline is fixed and used to calculate your 7% (2026) and 20% (2030) reduction targets. If you don't have 2021 data, Colorado Energy Office provides alternative baseline calculation methods. Your pathway selection and compliance status depend on this baseline.",
     },
     {
-      question: "What are ECAPP and BERI incentives?",
+      question: "What happens if I don't meet the targets?",
       answer:
-        "ECAPP (Early Compliance Assistance Pilot Program) is a $2M Oregon state fund (2025-2027) providing competitive grants for energy audits and early compliance projects. BERI (Building Efficiency & Resilience Implementation) is a $12M federal CERTA program for major energy efficiency implementations like HVAC upgrades and building envelope improvements. Both are competitive—apply early to maximize your chances. Projects achieving early compliance have the best shot at funding.",
-    },
-    {
-      question: "How long does it take to achieve compliance?",
-      answer:
-        "Plan 2-3 years minimum. Energy audits take 3-6 months. Applying for grants takes 3-6 months. Capital improvement projects (HVAC, lighting, envelope) take 6-18 months. After improvements, you need 12 months of utility data to verify your EUI meets the target. Starting early avoids rushed decisions, higher costs, and penalties. Buildings with June 2028 deadlines should begin in 2025-2026.",
-    },
-    {
-      question: "Do I need to hire an engineer or energy auditor?",
-      answer:
-        "For benchmarking (Tier 2), you can handle this internally or hire a consultant to input utility data into Portfolio Manager. For Tier 1 buildings exceeding EUIt, you'll need a qualified energy auditor (certified by ASHRAE or BPI) to perform the ASHRAE Level 2 audit. Implementation may require mechanical engineers, contractors, and project managers depending on scope. Many firms offer turnkey compliance services handling everything from audits to grant applications to construction management.",
-    },
-    {
-      question: "What are the penalties for non-compliance?",
-      answer:
-        "Tier 1 only: $5,000 base fine + $1.00 per square foot annually until you achieve compliance. For example, a 100,000 sq ft building faces $105,000/year in penalties. Penalties accrue every year you remain non-compliant—there is no cap. Tier 2: NO penalties. Tier 2 is reporting-only, so failure to report may result in notices but no financial penalties.",
+        "If you don't meet interim targets by December 31, 2026, monthly penalties begin June 1, 2027. If you don't meet final targets by December 31, 2030, monthly penalties begin June 1, 2031. Penalty amounts are determined based on degree of non-compliance. To avoid penalties, complete energy audits early, implement improvements, and track progress monthly.",
     },
     {
       question: "Can I get an exemption or extension?",
       answer:
-        "Colorado BPS includes exemptions for certain building types (industrial, manufacturing, agricultural, data centers, etc.). Check OAR 330-140 administrative rules for the complete list. Extensions may be available in cases of financial hardship, planned demolition, or technical infeasibility, but require formal application to Colorado Energy Office with supporting documentation. Extensions are not guaranteed and must be approved case-by-case.",
+        "Colorado BPS includes exemptions for certain building types (industrial, manufacturing, agricultural, data centers, etc.). Check with Colorado Energy Office for the complete list. Extensions may be available for financial hardship, planned demolition, or technical infeasibility, but require formal application with supporting documentation. Extensions are not guaranteed and must be approved case-by-case.",
     },
     {
-      question: "Do Portland buildings have additional requirements?",
+      question: "How long does it take to achieve compliance?",
       answer:
-        "Portland may have local energy benchmarking or building performance ordinances in addition to state requirements. Check with the City of Portland Bureau of Planning and Sustainability to understand if supplementary local regulations apply. Coordinate state and local compliance strategies to avoid duplication and streamline reporting.",
+        "Plan 18-24 months minimum. Energy audits take 3-6 months. Applying for federal IRA tax credits takes 2-4 months. Capital improvement projects (HVAC, envelope, controls) take 6-18 months. After improvements, you need 12 months of utility data to verify you've met targets. Starting now for the December 2025 audit deadline is critical—delayed starts lead to rushed decisions and higher costs.",
+    },
+    {
+      question: "Do I need to hire an engineer or energy auditor?",
+      answer:
+        "For benchmarking, you can handle data entry internally or hire a consultant. For pathway selection and compliance planning, you'll likely need a qualified energy auditor (certified by ASHRAE or BPI) to assess your building and recommend the best pathway. Implementation may require mechanical engineers, contractors, and project managers depending on scope. Many firms offer turnkey compliance services from audit through construction.",
+    },
+    {
+      question: "What are the penalties for non-compliance?",
+      answer:
+        "Benchmarking non-compliance: $500 (first occurrence), $2,000 (subsequent occurrences). Performance standard non-compliance: Monthly penalties begin June 1, 2027 (interim targets) and June 1, 2031 (final targets). Penalty amounts are determined by degree of non-compliance—exact amounts are set by Colorado Energy Office based on shortfall from targets.",
+    },
+    {
+      question: "Are there incentives to help pay for compliance?",
+      answer:
+        "Colorado has limited state grant funding compared to other states. Focus on federal incentives: IRA Tax Credit 179D (up to $5/sqft for energy efficiency), IRA 45L (new construction), and utility rebate programs from Xcel Energy, Black Hills Energy, and others. Check Colorado Energy Office's Building Owner Portal for current incentive listings and technical assistance programs.",
     },
     {
       question: "How much does compliance cost?",
       answer:
-        "Costs vary widely based on building condition and current EUI. Benchmarking (Tier 2): $500-$2,000. ASHRAE Level 2 audit: $5,000-$25,000 depending on building size. Energy improvements: Highly variable—$50,000-$500,000+ depending on needed upgrades. However, ECAPP/BERI grants can offset 30-60% of costs, and improved energy efficiency reduces operating expenses by 15-30% annually. Many compliance projects pay for themselves in 3-7 years through energy savings alone.",
+        "Costs vary widely. Annual benchmarking: $500-$2,000. Energy audit: $5,000-$25,000 depending on building size. Energy improvements: $50,000-$500,000+ depending on current condition and needed upgrades. However, federal IRA tax credits can offset 20-50% of costs, and improved energy efficiency reduces operating expenses by 15-30% annually. Many compliance projects pay for themselves in 4-8 years through energy savings alone.",
     },
   ]
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Header from "@/components/header"
 import HelpDeskHero from "@/components/help-desk-hero"
 import TabbedContent from "@/components/tabbed-content"
-import WhatIsOregonBPS from "@/components/what-is-oregon-bps"
+import WhatIsColoradoBPS from "@/components/what-is-colorado-bps"
 import KeyDeadlines from "@/components/key-deadlines"
 import CoverageChecker from "@/components/coverage-checker"
 import HowToComply from "@/components/how-to-comply"
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const tabs = [
     {
-      id: "what-is-oregon-bps",
+      id: "what-is-colorado-bps",
       label: "What is Colorado BPS?",
-      content: <WhatIsOregonBPS />,
+      content: <WhatIsColoradoBPS />,
     },
     {
       id: "coverage",

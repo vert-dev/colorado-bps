@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, DollarSign, Calendar, TrendingUp, AlertCircle } from "lucide-react"
+import { CheckCircle, DollarSign, Calendar, TrendingUp, AlertCircle, Building } from "lucide-react"
 import { useState } from "react"
 import { ContactFormModal } from "./contact-form-modal"
 import { useHubSpotBooking } from "@/lib/hooks/useHubSpotBooking"
@@ -18,27 +18,27 @@ export default function EarlyAdopterIncentives() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-colorado-blue-600 text-white px-4 py-2 text-sm font-semibold">
-              Early Compliance Funding Available Now
+              Federal Incentives Available Now
             </Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Colorado BPS Incentive Programs
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Oregon offers state and federal funding to support building owners in achieving early compliance
-              with Building Performance Standard requirements.
+              While Colorado has limited state funding, significant federal IRA tax credits and utility rebates are
+              available to help offset compliance costs.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
-            {/* ECAPP Fund */}
+            {/* Federal IRA 179D Tax Credit */}
             <Card className="border-2 border-colorado-blue-200 bg-colorado-blue-50">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-2xl text-colorado-blue-800">ECAPP Fund</CardTitle>
-                  <Badge className="bg-colorado-blue-600 text-white">$2M State Fund</Badge>
+                  <CardTitle className="text-2xl text-colorado-blue-800">IRA 179D Tax Credit</CardTitle>
+                  <Badge className="bg-colorado-blue-600 text-white">Up to $5/sqft</Badge>
                 </div>
                 <CardDescription className="text-colorado-blue-700 font-semibold">
-                  Early Compliance Assistance Pilot Program
+                  Federal Energy Efficient Commercial Buildings Deduction
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -47,28 +47,28 @@ export default function EarlyAdopterIncentives() {
                     <DollarSign className="h-5 w-5 text-colorado-gold-600" />
                     <span className="font-semibold text-colorado-blue-800">Program Details</span>
                   </div>
-                  <p className="text-2xl font-bold text-colorado-gold-600 mb-2">$2 Million Available</p>
-                  <p className="text-sm text-gray-700">Competitive grants for early compliance projects (2025-2027)</p>
+                  <p className="text-2xl font-bold text-colorado-gold-600 mb-2">Up to $5.00 per sq ft</p>
+                  <p className="text-sm text-gray-700">Federal tax deduction for energy efficiency improvements (Inflation Reduction Act)</p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-colorado-blue-800">Eligible Activities:</h4>
+                  <h4 className="font-semibold text-colorado-blue-800">Eligible Improvements:</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                      Energy audits (ASHRAE Level 2 or equivalent)
+                      HVAC system upgrades (up to $1.00/sqft)
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                      Energy efficiency improvements to meet EUIt
+                      Building envelope improvements (up to $1.00/sqft)
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                      Projects achieving compliance 1-2 years early
+                      Interior lighting systems (up to $1.00/sqft)
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                      Benchmarking and EUI tracking systems
+                      Whole-building projects achieving 50%+ energy savings (up to $5.00/sqft)
                     </li>
                   </ul>
                 </div>
@@ -77,8 +77,8 @@ export default function EarlyAdopterIncentives() {
                   <div className="flex items-start gap-2">
                     <Calendar className="h-4 w-4 text-colorado-blue-700 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-sm font-semibold text-colorado-blue-800">Application Window</p>
-                      <p className="text-sm text-colorado-blue-700">Available 2025-2027 on rolling basis until funds exhausted</p>
+                      <p className="text-sm font-semibold text-colorado-blue-800">Available Through 2032</p>
+                      <p className="text-sm text-colorado-blue-700">Annual tax deduction for qualifying energy efficiency projects</p>
                     </div>
                   </div>
                 </div>
@@ -87,59 +87,59 @@ export default function EarlyAdopterIncentives() {
                   <div className="flex items-start gap-2">
                     <AlertCircle className="h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-amber-800">
-                      <strong>Competitive Process:</strong> Limited funding available. Strong applications demonstrate
-                      significant energy savings and early compliance commitment.
+                      <strong>Requirements:</strong> Projects must achieve specified energy savings targets verified
+                      through energy modeling. Prevailing wage requirements apply for maximum credit amounts.
                     </p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* BERI Grants */}
+            {/* Utility Rebate Programs */}
             <Card className="border-2 border-blue-200 bg-blue-50">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-2xl text-blue-800">BERI Grants</CardTitle>
-                  <Badge className="bg-blue-600 text-white">$12M Federal Fund</Badge>
+                  <CardTitle className="text-2xl text-blue-800">Utility Rebate Programs</CardTitle>
+                  <Badge className="bg-blue-600 text-white">Varies by Utility</Badge>
                 </div>
                 <CardDescription className="text-blue-700 font-semibold">
-                  Building Efficiency and Resilience Implementation
+                  Xcel Energy, Black Hills Energy, and Municipal Utilities
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="bg-white p-4 rounded-lg border border-blue-200">
                   <div className="flex items-center gap-2 mb-2">
-                    <DollarSign className="h-5 w-5 text-blue-600" />
-                    <span className="font-semibold text-blue-800">Program Details</span>
+                    <Building className="h-5 w-5 text-blue-600" />
+                    <span className="font-semibold text-blue-800">Rebate Opportunities</span>
                   </div>
-                  <p className="text-2xl font-bold text-blue-600 mb-2">$12 Million Federal CERTA</p>
+                  <p className="text-2xl font-bold text-blue-600 mb-2">Up to 50% of Project Costs</p>
                   <p className="text-sm text-gray-700">
-                    Climate and Energy Resources for Transformation and Assistance program
+                    Colorado utilities offer rebates for energy efficiency measures
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-blue-800">Funding Priorities:</h4>
+                  <h4 className="font-semibold text-blue-800">Typical Rebate Categories:</h4>
                   <ul className="text-sm text-gray-700 space-y-1">
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                      High energy savings potential (deep retrofits)
+                      HVAC equipment upgrades and controls
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                      Buildings in disadvantaged communities
+                      LED lighting retrofits and controls
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                      Projects demonstrating climate resilience
+                      Building automation systems (BAS)
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                      Comprehensive building envelope improvements
+                      Custom efficiency projects (engineered approach)
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                      HVAC system modernization
+                      Energy audits and retro-commissioning
                     </li>
                   </ul>
                 </div>
@@ -148,9 +148,9 @@ export default function EarlyAdopterIncentives() {
                   <div className="flex items-start gap-2">
                     <TrendingUp className="h-4 w-4 text-blue-700 mt-0.5 flex-shrink-0" />
                     <div>
-                      <p className="text-sm font-semibold text-blue-800">Implementation Focus</p>
+                      <p className="text-sm font-semibold text-blue-800">Utility-Specific Programs</p>
                       <p className="text-sm text-blue-700">
-                        Grants support actual construction and equipment installation, not just planning
+                        Contact your utility provider for current rebate schedules and pre-approval requirements
                       </p>
                     </div>
                   </div>
@@ -160,8 +160,8 @@ export default function EarlyAdopterIncentives() {
                   <div className="flex items-start gap-2">
                     <AlertCircle className="h-4 w-4 text-amber-600 mt-0.5 flex-shrink-0" />
                     <p className="text-sm text-amber-800">
-                      <strong>Federal Requirements:</strong> Additional compliance documentation, prevailing wage, and
-                      Davis-Bacon Act requirements may apply.
+                      <strong>Application Required:</strong> Most rebates require pre-approval before project start.
+                      Rebate amounts and eligibility vary by utility service territory.
                     </p>
                   </div>
                 </div>
@@ -169,12 +169,47 @@ export default function EarlyAdopterIncentives() {
             </Card>
           </div>
 
+          {/* Colorado Energy Office Support */}
+          <Card className="border-2 border-colorado-gold-200 bg-colorado-gold-50 mb-8">
+            <CardHeader>
+              <CardTitle className="text-2xl text-slate-800">Colorado Energy Office Technical Assistance</CardTitle>
+              <CardDescription className="text-slate-700">
+                Free resources and guidance for Colorado BPS compliance
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-white p-4 rounded-lg border border-colorado-gold-200">
+                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Building Owner Portal</h4>
+                  <p className="text-sm text-gray-700">
+                    Access customized compliance reports, technical guides, and submit required documentation through
+                    Colorado's BEAM Portal.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-colorado-gold-200">
+                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Technical Resource Guides</h4>
+                  <p className="text-sm text-gray-700">
+                    Detailed guidance on benchmarking, pathway selection, energy audits, and compliance verification
+                    available through the state portal.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-colorado-gold-200">
+                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Help Desk Support</h4>
+                  <p className="text-sm text-gray-700">
+                    Direct support from Colorado Energy Office staff for questions about compliance requirements, deadlines,
+                    and technical guidance.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Combined Strategy Card */}
           <Card className="bg-gradient-to-br from-colorado-blue-50 to-colorado-blue-50 border-2 border-colorado-blue-200">
             <CardHeader>
               <CardTitle className="text-2xl text-colorado-blue-800">Maximize Your Incentives</CardTitle>
               <CardDescription className="text-colorado-blue-700">
-                Combine ECAPP and BERI funding for comprehensive project support
+                Stack federal tax credits with utility rebates for maximum savings
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -183,42 +218,42 @@ export default function EarlyAdopterIncentives() {
                   <div className="text-3xl font-bold text-colorado-gold-600 mb-2">Step 1</div>
                   <h4 className="font-semibold text-colorado-blue-800 mb-2">Energy Audit</h4>
                   <p className="text-sm text-gray-700">
-                    Use ECAPP funds for ASHRAE Level 2 audit to identify improvement opportunities
+                    Complete energy audit by Dec 31, 2025 to identify efficiency opportunities and estimate IRA 179D eligibility
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-colorado-blue-200">
                   <div className="text-3xl font-bold text-blue-600 mb-2">Step 2</div>
-                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Implementation</h4>
+                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Stack Incentives</h4>
                   <p className="text-sm text-gray-700">
-                    Apply for BERI grants to fund major equipment upgrades and building envelope improvements
+                    Apply for utility rebates (pre-approval), then claim federal 179D tax credit after project completion
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-colorado-blue-200">
                   <div className="text-3xl font-bold text-colorado-blue-600 mb-2">Step 3</div>
-                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Early Compliance</h4>
+                  <h4 className="font-semibold text-colorado-blue-800 mb-2">Meet Targets</h4>
                   <p className="text-sm text-gray-700">
-                    Achieve compliance 1-2 years early, avoid penalties, reduce operating costs
+                    Achieve 7% (2026) and 20% (2030) reductions, avoid penalties, reduce operating costs long-term
                   </p>
                 </div>
               </div>
 
               <div className="bg-white p-6 rounded-lg border border-colorado-blue-200 mt-6">
-                <h4 className="font-semibold text-colorado-blue-800 mb-3 text-lg">Application Support Available</h4>
+                <h4 className="font-semibold text-colorado-blue-800 mb-3 text-lg">Incentive Application Support Available</h4>
                 <p className="text-gray-700 mb-4">
-                  Our team has experience navigating both ECAPP and BERI application processes. We can help you:
+                  Our team has experience navigating federal IRA tax credits and utility rebate programs. We can help you:
                 </p>
                 <ul className="grid md:grid-cols-2 gap-2 text-sm text-gray-700 mb-6">
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                    Assess incentive eligibility
+                    Assess IRA 179D tax credit eligibility
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                    Prepare grant applications
+                    Coordinate utility rebate pre-approvals
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-                    Coordinate audit and implementation timing
+                    Prepare energy modeling documentation
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="h-4 w-4 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
@@ -265,21 +300,21 @@ export default function EarlyAdopterIncentives() {
               <CardHeader>
                 <CardTitle className="flex items-center text-amber-800">
                   <AlertCircle className="w-5 h-5 mr-2" />
-                  Funding Limitations
+                  Incentive Considerations
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-amber-800 space-y-2">
                 <p>
-                  <strong>ECAPP ($2M):</strong> Limited state funding means highly competitive selection process.
-                  Priority given to projects demonstrating substantial energy savings and early compliance.
+                  <strong>IRA 179D Tax Credits:</strong> Require energy modeling certification and may have prevailing wage
+                  requirements for maximum credit amounts. Work with qualified tax professionals.
                 </p>
                 <p>
-                  <strong>BERI ($12M):</strong> Federal funds require additional compliance with prevailing wage laws,
-                  Buy America provisions, and environmental review processes.
+                  <strong>Utility Rebates:</strong> Most require pre-approval before project start. Rebate amounts vary
+                  by utility territory and may have annual budget caps—apply early.
                 </p>
                 <p>
-                  <strong>Timeline:</strong> Grant processes take 3-6 months. Plan applications well in advance of
-                  project start dates.
+                  <strong>Timeline:</strong> Incentive application processes take 2-6 months. Plan applications well in
+                  advance of December 2025 audit deadline.
                 </p>
               </CardContent>
             </Card>
@@ -293,24 +328,40 @@ export default function EarlyAdopterIncentives() {
               </CardHeader>
               <CardContent className="text-sm text-blue-800 space-y-2">
                 <p>
-                  <strong>ECAPP Details:</strong> Contact Colorado Energy Office for current application cycles,
-                  eligibility criteria, and award amounts.
-                </p>
-                <p>
-                  <strong>BERI Information:</strong> Federal CERTA program administered through Colorado Energy Office with
-                  additional state-specific guidelines.
-                </p>
-                <p>
-                  <strong>Resources:</strong> Visit{" "}
+                  <strong>Colorado Energy Office:</strong> Visit{" "}
                   <a
-                    href="https://www.oregon.gov/energy"
+                    href="https://energyoffice.colorado.gov/building-performance"
                     className="underline hover:text-blue-600"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    oregon.gov/energy
+                    energyoffice.colorado.gov/building-performance
                   </a>{" "}
-                  for official program documentation and application forms.
+                  for official BPS compliance information.
+                </p>
+                <p>
+                  <strong>BEAM Portal:</strong> Access Colorado's Building Owner Portal at{" "}
+                  <a
+                    href="https://co.beam-portal.org"
+                    className="underline hover:text-blue-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    co.beam-portal.org
+                  </a>{" "}
+                  for benchmarking and compliance reporting.
+                </p>
+                <p>
+                  <strong>IRS 179D Info:</strong> Visit{" "}
+                  <a
+                    href="https://www.irs.gov/credits-deductions/energy-efficient-commercial-buildings-deduction"
+                    className="underline hover:text-blue-600"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    IRS.gov
+                  </a>{" "}
+                  for federal tax credit details and requirements.
                 </p>
               </CardContent>
             </Card>

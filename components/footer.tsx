@@ -49,7 +49,7 @@ export default function Footer() {
               <h3 className="font-semibold text-white mb-4">Independence Disclosure</h3>
               <p className="text-sm">
                 This website is operated independently by Vert Energy Group and is not affiliated with or endorsed by
-                the Oregon Department of Commerce or any government agency.
+                the Colorado Energy Office or any government agency.
               </p>
             </div>
           </div>
