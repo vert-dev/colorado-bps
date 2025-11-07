@@ -122,11 +122,11 @@ export default function HomePage() {
             "@type": "GovernmentService",
             name: "Colorado Building Performance Standard Help Desk",
             description:
-              "Resources and guidance for building owners to comply with Oregon's Building Performance Standard law.",
+              "Resources and guidance for building owners to comply with Colorado's Building Performance Standard law (HB 21-1286).",
             serviceType: "Building Compliance Information",
             areaServed: {
               "@type": "State",
-              name: "Oregon",
+              name: "Colorado",
             },
             provider: {
               "@type": "Organization",
@@ -149,7 +149,7 @@ export default function HomePage() {
                 name: "Who enforces the Colorado BPS?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "The Colorado Energy Office (CEO) and Oregon Department of Environmental Quality (DEQ) enforce the Building Performance Standard.",
+                  text: "The Colorado Energy Office (CEO) enforces the Building Performance Standard (HB 21-1286) for all buildings ≥50,000 sq ft.",
                 },
               },
               {
@@ -157,7 +157,7 @@ export default function HomePage() {
                 name: "What are the penalties for non-compliance?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Tier 1 buildings face $5,000 base fine plus $1.00 per sq ft annually until compliant. Tier 2 buildings have NO penalties - reporting only.",
+                  text: "Colorado BPS has two penalty tracks: benchmarking penalties ($500 first offense, $2,000 subsequent) and monthly performance penalties starting June 2027 (interim target) and June 2031 (final target). Penalty amounts are based on degree of non-compliance.",
                 },
               },
             ],
