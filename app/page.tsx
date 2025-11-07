@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     url: "https://co-bps.com",
     images: [
       {
-        url: "/images/colorado-bps-og.png",
+        url: "/images/colorado-bps-logo.png",
         width: 1200,
         height: 630,
         alt: "Colorado BPS Help Desk - Building Performance Standard Compliance",

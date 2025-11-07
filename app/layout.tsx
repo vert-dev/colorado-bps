@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. December 2025 audit/pathway deadline. 3 compliance pathways for buildings ≥50k sq ft.",
     images: [
       {
-        url: "/images/colorado-bps-og.png",
+        url: "/images/colorado-bps-logo.png",
         width: 1200,
         height: 630,
         alt: "Colorado BPS Compliance Services",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
       "Colorado BPS Compliance Help | Building Performance Standard",
     description:
       "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. December 2025 audit/pathway deadline. Buildings ≥50k sq ft.",
-    images: ["/images/colorado-bps-og.png"],
+    images: ["/images/colorado-bps-logo.png"],
   },
   alternates: {
     canonical: "https://co-bps.com",
