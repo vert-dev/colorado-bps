@@ -10,14 +10,14 @@ import type { FormData } from '@/lib/cbps-calculator'
 const CALENDAR_URLS = {
   // Dylan (dheppner) - for 1-2 buildings
   dylan: 'https://meetings.hubspot.com/dheppner/wa-state-compliance-review',
-  // Kevin - for 3+ buildings (Oregon BPS)
-  kevin: 'https://meetings.hubspot.com/kevin-sullivan2/oregon-bps-compliance-review',
+  // Kevin - for 3+ buildings (Colorado BPS)
+  kevin: 'https://meetings.hubspot.com/kevin-sullivan2/colorado-bps-compliance-review',
 }
 
 /**
- * Legacy base URL (kept for backwards compatibility)
+ * Default Colorado BPS booking URL
  */
-const HUBSPOT_BOOKING_URL = 'https://meetings.hubspot.com/dheppner/wa-state-compliance-review?uuid=512966ad-ff53-4dca-9607-6b548f522c72'
+const HUBSPOT_BOOKING_URL = 'https://meetings.hubspot.com/kevin-sullivan2/colorado-bps-compliance-review'
 
 /**
  * Custom hook for managing HubSpot booking links with UTM parameters

@@ -34,7 +34,7 @@ export default function NewsletterSignup() {
       formDataToSend.append("timestamp", new Date().toISOString())
       formDataToSend.append("page_url", window.location.href)
 
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/885017/uswl7yn/", {
+      const response = await fetch("https://hooks.zapier.com/hooks/catch/885017/uswjibw/", {
         method: "POST",
         body: formDataToSend,
       })

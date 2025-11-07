@@ -54,7 +54,7 @@ export default function EmailCaptureModal({
       formDataToSend.append("resource_url", downloadUrl)
       formDataToSend.append("timestamp", new Date().toISOString())
 
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/885017/uswl7yn/", {
+      const response = await fetch("https://hooks.zapier.com/hooks/catch/885017/uswjibw/", {
         method: "POST",
         body: formDataToSend,
       })
