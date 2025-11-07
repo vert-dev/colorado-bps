@@ -29,14 +29,14 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">2. Website Purpose</h2>
               <p className="text-slate-700 mb-4">
-                This website provides educational information about Oregon's Clean Buildings Performance
-                Standard (CBPS). The information is provided for general guidance only and should not be considered as:
+                This website provides educational information about Colorado's Building Performance Standard (BPS)
+                established under HB 21-1286. The information is provided for general guidance only and should not be considered as:
               </p>
               <ul className="list-disc pl-6 text-slate-700">
                 <li>Legal advice or official government guidance</li>
                 <li>Professional engineering or architectural advice</li>
                 <li>A substitute for consulting with qualified professionals</li>
-                <li>Official interpretation of CBPS regulations</li>
+                <li>Official interpretation of BPS regulations</li>
               </ul>
             </section>
 
@@ -44,7 +44,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">3. Independence Disclosure</h2>
               <p className="text-slate-700">
                 This website is operated independently by Vert Energy Group and is not affiliated with, endorsed by, or
-                connected to the Oregon Department of Commerce or any government agency. All official CBPS
+                connected to the Colorado Energy Office or any government agency. All official BPS
                 information should be verified through official government sources.
               </p>
             </section>
@@ -52,7 +52,7 @@ export default function TermsOfService() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">4. Accuracy of Information</h2>
               <p className="text-slate-700">
-                While we strive to provide accurate and up-to-date information, CBPS regulations may change. Users are
+                While we strive to provide accurate and up-to-date information, BPS regulations may change. Users are
                 responsible for verifying all information with official sources before making compliance decisions.
               </p>
             </section>
@@ -61,7 +61,7 @@ export default function TermsOfService() {
               <h2 className="text-2xl font-semibold text-slate-900 mb-4">5. Limitation of Liability</h2>
               <p className="text-slate-700">
                 Vert Energy Group shall not be liable for any damages arising from the use of this website or reliance
-                on the information provided. Users assume full responsibility for compliance with CBPS requirements.
+                on the information provided. Users assume full responsibility for compliance with BPS requirements.
               </p>
             </section>
 
