@@ -11,26 +11,26 @@ export default function KeyDeadlines() {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-slate-800 mb-4">Key Deadlines & Compliance Requirements</h2>
-          <p className="text-lg text-slate-700">Colorado BPS compliance deadlines by building tier and size</p>
-          <p className="text-sm text-slate-500 mt-2">Per HB 21-1286 (2021) and Oregon Administrative Rules (OAR 330-140)</p>
+          <p className="text-lg text-slate-700">Colorado BPS compliance timeline for buildings ≥50,000 sq ft</p>
+          <p className="text-sm text-slate-500 mt-2">Per HB 21-1286 (2021) and Colorado Energy Office regulations</p>
         </div>
 
         <div className="space-y-4 mb-12">
           <Alert variant="destructive">
             <AlertTriangle className="h-4 w-4" />
-            <AlertTitle>First Compliance Period Approaching</AlertTitle>
+            <AlertTitle>Critical Deadline: December 31, 2025</AlertTitle>
             <AlertDescription>
-              Tier 1 buildings ≥100k sq ft must meet EUI targets by <strong>June 2028</strong>.
-              Energy audits and improvement plans should begin in 2025-2026 to ensure adequate time for implementation.
+              Complete energy audit, select compliance pathway, and file compliance plan by <strong>December 31, 2025</strong>.
+              This is mandatory for all buildings ≥50k sqft and determines your path to 2026 & 2030 targets.
             </AlertDescription>
           </Alert>
 
           <Alert>
             <Clock className="h-4 w-4" />
-            <AlertTitle>Early Compliance Incentives Available</AlertTitle>
+            <AlertTitle>Annual Benchmarking Required</AlertTitle>
             <AlertDescription>
-              ECAPP fund ($2M) available for early compliance 2025-2027. BERI grants ($12M federal) support energy efficiency implementations.
-              <strong> Apply early - funding is limited and competitive.</strong>
+              Annual benchmarking reports due <strong>August 1 each year</strong> with $100/building fee.
+              Penalties: $500 (first occurrence), $2,000 (subsequent occurrences).
             </AlertDescription>
           </Alert>
         </div>
@@ -41,30 +41,30 @@ export default function KeyDeadlines() {
           <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-slate-200"></div>
 
           <div className="space-y-8">
-            {/* Tier 2 Reporting Begins */}
+            {/* 2024-2025: Benchmarking & Planning */}
             <div className="relative flex items-center">
               <div className="flex-1 pr-8">
                 <Card className="p-6 border-blue-200 bg-blue-50">
                   <div className="flex items-center gap-3 mb-3">
                     <Calendar className="w-5 h-5 text-blue-600" />
-                    <Badge className="bg-blue-100 text-blue-800">Tier 2 Reporting</Badge>
+                    <Badge className="bg-blue-100 text-blue-800">Ongoing</Badge>
                   </div>
-                  <h3 className="font-semibold text-slate-800 mb-2">Tier 2: Initial Reporting Deadline</h3>
+                  <h3 className="font-semibold text-slate-800 mb-2">2024-2025: Benchmarking & Planning Phase</h3>
                   <p className="text-slate-700 mb-2">
-                    <strong>Reporting Due:</strong> July 2028
+                    <strong>Annual Deadline:</strong> August 1 each year
                   </p>
                   <div className="text-sm text-slate-600 space-y-1">
                     <p>
-                      <strong>Covered Buildings:</strong> Commercial 20-35k sq ft + ALL institutional ≥35k sq ft
+                      <strong>Requirements:</strong> Submit annual benchmarking report via Energy Star Portfolio Manager
                     </p>
                     <p>
-                      <strong>Requirements:</strong> Energy benchmarking via Energy Star Portfolio Manager, submit data to Colorado Energy Office
+                      <strong>Fee:</strong> $100 per building per year
+                    </p>
+                    <p>
+                      <strong>Penalties:</strong> $500 (first failure), $2,000 (subsequent failures)
                     </p>
                     <p className="text-blue-600 font-semibold">
-                      Note: Tier 2 is reporting-only. No performance targets or penalties.
-                    </p>
-                    <p>
-                      <strong>Action Items:</strong> Create Portfolio Manager account, establish benchmarking process
+                      Action: Set up Portfolio Manager account and connect to Colorado BEAM Portal
                     </p>
                   </div>
                 </Card>
@@ -73,168 +73,155 @@ export default function KeyDeadlines() {
               <div className="flex-1 pl-8"></div>
             </div>
 
-            {/* Tier 1 Largest Buildings */}
+            {/* December 2025: Audit & Pathway Selection */}
             <div className="relative flex items-center">
               <div className="flex-1 pr-8"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-red-500 rounded-full border-4 border-white"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-red-500 rounded-full border-4 border-white"></div>
               <div className="flex-1 pl-8">
                 <Card className="p-6 border-red-200 bg-red-50">
                   <div className="flex items-center gap-3 mb-3">
                     <AlertTriangle className="w-5 h-5 text-red-600" />
-                    <Badge variant="destructive">Performance Target</Badge>
+                    <Badge variant="destructive">Critical Deadline</Badge>
                   </div>
-                  <h3 className="font-semibold text-slate-800 mb-2">Tier 1: Commercial ≥100,000 sq ft</h3>
+                  <h3 className="font-semibold text-slate-800 mb-2">December 31, 2025: Audit & Pathway Selection</h3>
                   <p className="text-slate-700 mb-2">
-                    <strong>Compliance Due:</strong> June 2028
+                    <strong>Deadline:</strong> December 31, 2025
                   </p>
                   <div className="text-sm text-slate-600 space-y-1">
                     <p>
-                      <strong>Requirement:</strong> Meet building-specific EUI target (EUIt) based on activity type
+                      <strong>Requirements:</strong> Complete energy audit, select compliance pathway, file compliance plan
+                    </p>
+                    <p>
+                      <strong>3 Pathway Options:</strong> Energy Efficiency, GHG Reduction, or Standard % Reduction
                     </p>
                     <p className="text-red-600 font-semibold">
-                      <strong>Penalties if non-compliant:</strong> $5,000 + $1.00/sq ft annually
+                      This determines your interim and final targets
                     </p>
                     <p>
-                      <strong>Recommended Timeline:</strong> Complete ASHRAE Level 2 audit by 2026, begin improvements 2026-2027
-                    </p>
-                    <p>
-                      <strong>Incentives:</strong> ECAPP early compliance fund, BERI implementation grants
+                      <strong>Recommended:</strong> Start audit process in early 2025
                     </p>
                   </div>
                 </Card>
               </div>
             </div>
 
-            {/* Tier 1 Medium Buildings */}
+            {/* December 2026: Interim Target */}
             <div className="relative flex items-center">
               <div className="flex-1 pr-8">
-                <Card className="p-6 border-amber-200 bg-amber-50">
+                <Card className="p-6 border-yellow-200 bg-yellow-50">
                   <div className="flex items-center gap-3 mb-3">
-                    <Calendar className="w-5 h-5 text-amber-600" />
-                    <Badge className="bg-amber-100 text-amber-800">Tier 1</Badge>
+                    <Clock className="w-5 h-5 text-yellow-600" />
+                    <Badge className="bg-yellow-100 text-yellow-800">Interim Target</Badge>
                   </div>
-                  <h3 className="font-semibold text-slate-800 mb-2">Tier 1: Commercial 50-100k sq ft</h3>
+                  <h3 className="font-semibold text-slate-800 mb-2">December 31, 2026: Interim Performance Target</h3>
                   <p className="text-slate-700 mb-2">
-                    <strong>Compliance Due:</strong> June 2029
+                    <strong>Target:</strong> 7% reduction from 2021 baseline
                   </p>
                   <div className="text-sm text-slate-600 space-y-1">
                     <p>
-                      <strong>Requirement:</strong> Meet building-specific EUI target (EUIt)
-                    </p>
-                    <p className="text-amber-600 font-semibold">
-                      <strong>Penalties if non-compliant:</strong> $5,000 + $1.00/sq ft annually
+                      <strong>Requirements:</strong> Meet interim EUI or GHG targets based on selected pathway
                     </p>
                     <p>
-                      <strong>Recommended Timeline:</strong> Complete audit by 2027, implement improvements 2027-2028
+                      <strong>Verification:</strong> Submit compliance report via Building Owner Portal
                     </p>
-                    <p>
-                      <strong>Advantage:</strong> Learn from 2028 compliance cycle, leverage proven strategies
+                    <p className="text-yellow-700 font-semibold">
+                      Monthly penalties begin June 1, 2027 if non-compliant
                     </p>
                   </div>
                 </Card>
               </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-amber-500 rounded-full border-4 border-white"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-white"></div>
               <div className="flex-1 pl-8"></div>
             </div>
 
-            {/* Tier 1 Smallest Buildings */}
+            {/* June 2027: Penalties Begin */}
             <div className="relative flex items-center">
               <div className="flex-1 pr-8"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-slate-400 rounded-full border-4 border-white"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-red-500 rounded-full border-4 border-white"></div>
               <div className="flex-1 pl-8">
-                <Card className="p-6 border-slate-200">
+                <Card className="p-6 border-red-200 bg-red-50">
                   <div className="flex items-center gap-3 mb-3">
-                    <Calendar className="w-5 h-5 text-slate-600" />
-                    <Badge variant="secondary">Tier 1</Badge>
+                    <AlertTriangle className="w-5 h-5 text-red-600" />
+                    <Badge variant="destructive">Enforcement Begins</Badge>
                   </div>
-                  <h3 className="font-semibold text-slate-800 mb-2">Tier 1: Commercial 35-50k sq ft</h3>
+                  <h3 className="font-semibold text-slate-800 mb-2">June 1, 2027: Monthly Interim Penalties Begin</h3>
                   <p className="text-slate-700 mb-2">
-                    <strong>Compliance Due:</strong> June 2030
+                    <strong>Enforcement:</strong> Monthly penalties for missing 2026 targets
                   </p>
                   <div className="text-sm text-slate-600 space-y-1">
                     <p>
-                      <strong>Requirement:</strong> Meet building-specific EUI target (EUIt)
+                      <strong>Penalty Structure:</strong> Based on degree of non-compliance (monthly)
                     </p>
-                    <p className="text-slate-600">
-                      <strong>Penalties if non-compliant:</strong> $5,000 + $1.00/sq ft annually
+                    <p className="text-red-600 font-semibold">
+                      Penalties continue monthly until compliance is achieved
                     </p>
                     <p>
-                      <strong>Recommended Timeline:</strong> Complete audit by 2028, implement improvements 2028-2029
-                    </p>
-                    <p className="text-colorado-gold-600 font-semibold">
-                      Maximum time to prepare - use it wisely to avoid costly rush implementations
+                      <strong>Avoidance:</strong> Meet 2026 interim targets to avoid all penalties
                     </p>
                   </div>
                 </Card>
               </div>
+            </div>
+
+            {/* December 2030: Final Target */}
+            <div className="relative flex items-center">
+              <div className="flex-1 pr-8">
+                <Card className="p-6 border-colorado-blue-200 bg-colorado-blue-50">
+                  <div className="flex items-center gap-3 mb-3">
+                    <Calendar className="w-5 h-5 text-colorado-blue-600" />
+                    <Badge className="bg-colorado-blue-100 text-colorado-blue-800">Final Target</Badge>
+                  </div>
+                  <h3 className="font-semibold text-slate-800 mb-2">December 31, 2030: Final Performance Target</h3>
+                  <p className="text-slate-700 mb-2">
+                    <strong>Target:</strong> 20% reduction from 2021 baseline
+                  </p>
+                  <div className="text-sm text-slate-600 space-y-1">
+                    <p>
+                      <strong>Requirements:</strong> Meet final EUI or GHG targets based on selected pathway
+                    </p>
+                    <p>
+                      <strong>Long-term Goal:</strong> Sustained energy/emissions reductions through 2050
+                    </p>
+                    <p className="text-colorado-blue-700 font-semibold">
+                      Monthly penalties begin June 1, 2031 if non-compliant
+                    </p>
+                  </div>
+                </Card>
+              </div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-blue-500 rounded-full border-4 border-white"></div>
+              <div className="flex-1 pl-8"></div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 space-y-4">
-          <div className="p-6 bg-red-50 border border-red-200 rounded-lg">
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
+        {/* Summary Box */}
+        <div className="mt-12">
+          <div className="p-6 bg-gradient-to-r from-colorado-blue-50 to-colorado-gold-50 border border-colorado-blue-200 rounded-lg">
+            <h3 className="text-lg font-semibold text-colorado-blue-800 mb-4">Compliance Timeline Summary</h3>
+            <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
-                <p className="font-semibold text-red-800 mb-2">🚨 Penalties Are Real and Significant:</p>
-                <p className="text-red-700 mb-2">
-                  Tier 1 non-compliance carries penalties of <strong>$5,000 + $1/sq ft annually</strong>.
-                  For a 100,000 sq ft building, that's <strong>$105,000/year</strong> in ongoing penalties.
-                </p>
-                <p className="text-red-800 font-semibold">
-                  Start planning now. Energy audits take 3-6 months, and implementation projects can take 12-18 months.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-6 bg-colorado-blue-50 border border-colorado-blue-200 rounded-lg">
-            <div className="flex items-start gap-3">
-              <Clock className="w-5 h-5 text-colorado-gold-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <p className="font-semibold text-colorado-blue-800 mb-2">Early Compliance Incentives:</p>
-                <p className="text-colorado-blue-700">
-                  <strong>ECAPP ($2M state fund):</strong> Available 2025-2027 for early compliance projects.
-                  Competitive grants for buildings that achieve compliance ahead of deadlines.
-                </p>
-                <p className="text-colorado-blue-700 mt-2">
-                  <strong>BERI ($12M federal grant):</strong> Implementation funding for energy efficiency improvements.
-                  Prioritizes projects with high energy savings potential.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="p-6 bg-amber-50 border border-amber-200 rounded-lg">
-            <div className="flex items-start gap-3">
-              <AlertTriangle className="w-5 h-5 text-amber-600 mt-0.5 flex-shrink-0" />
-              <div>
-                <p className="font-semibold text-amber-800 mb-2">Understanding EUI vs EUIt:</p>
-                <p className="text-amber-700">
-                  <strong>EUI (Energy Use Intensity):</strong> Your building's actual energy use per square foot per year.
-                  Calculated from utility bills and benchmarked in Energy Star Portfolio Manager.
-                </p>
-                <p className="text-amber-700 mt-2">
-                  <strong>EUIt (Energy Use Intensity Target):</strong> Oregon's performance target for your building type and activity.
-                  Your EUI must be ≤ your EUIt to comply.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Portland Buildings - Dual Compliance */}
-          <div className="p-6 bg-blue-50 border border-blue-200 rounded-lg">
-            <div className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold mt-0.5">
-                PDX
+                <p className="font-semibold text-colorado-blue-700 mb-2">Annual (2024+)</p>
+                <ul className="space-y-1 text-slate-600">
+                  <li>• Benchmark by Aug 1</li>
+                  <li>• Pay $100 fee</li>
+                  <li>• Submit to CEO</li>
+                </ul>
               </div>
               <div>
-                <p className="font-semibold text-blue-800 mb-2">Portland Buildings - Local Ordinances May Apply:</p>
-                <p className="text-blue-700">
-                  Portland may have additional local energy benchmarking or performance requirements.
-                  Check with City of Portland Bureau of Planning and Sustainability for any supplementary compliance obligations.
-                  Coordinate state and local compliance strategies to avoid duplication and maximize efficiency.
-                </p>
+                <p className="font-semibold text-colorado-red-700 mb-2">2025-2026</p>
+                <ul className="space-y-1 text-slate-600">
+                  <li>• Complete audit (by Dec 31, 2025)</li>
+                  <li>• Select pathway</li>
+                  <li>• Meet 7% target (by Dec 31, 2026)</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-semibold text-colorado-blue-700 mb-2">2027-2030</p>
+                <ul className="space-y-1 text-slate-600">
+                  <li>• Avoid monthly penalties</li>
+                  <li>• Continue improvements</li>
+                  <li>• Meet 20% target (by Dec 31, 2030)</li>
+                </ul>
               </div>
             </div>
           </div>
