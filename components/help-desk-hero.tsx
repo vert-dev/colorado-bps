@@ -113,7 +113,7 @@ export default function HelpDeskHero() {
 
             <div className="flex justify-center lg:justify-end">
               <Image
-                src="/images/oregon-bps-emblem-large.png"
+                src="/images/colorado-bps-logo.png"
                 alt="Colorado BPS Official Emblem"
                 width={300}
                 height={300}
