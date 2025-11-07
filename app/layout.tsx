@@ -11,24 +11,24 @@ export const metadata: Metadata = {
   title:
     "Colorado BPS Compliance Help | Building Performance Standard Expert Services",
   description:
-    "Expert Colorado Building Performance Standard (BPS) compliance services. Tier 1 commercial ≥35k sqft, Tier 2 institutional buildings. Energy Use Intensity (EUI) audits, ECAPP/BERI incentives, compliance packages. Serving Oregon statewide.",
+    "Expert Colorado Building Performance Standard (HB 21-1286) compliance services for buildings ≥50,000 sq ft. 3 compliance pathways, energy audits, December 2025 deadline. Serving Colorado statewide.",
   keywords: [
     "Colorado BPS",
-    "Building Performance Standard Oregon",
-    "Oregon compliance",
+    "Building Performance Standard Colorado",
+    "Colorado compliance",
     "HB 21-1286",
-    "Energy Use Intensity",
-    "EUI compliance",
-    "EUIt targets",
-    "June 2028 deadline",
-    "building compliance Oregon",
+    "HB21-1286",
+    "Colorado Energy Office",
+    "BEAM Portal",
+    "December 2025 deadline",
+    "building compliance Colorado",
     "BPS requirements",
-    "energy benchmarking Oregon",
+    "energy benchmarking Colorado",
     "commercial building compliance",
-    "institutional building compliance",
-    "Oregon energy law",
-    "ECAPP incentives",
-    "BERI grants",
+    "50000 sq ft compliance",
+    "Colorado energy law",
+    "compliance pathway",
+    "energy audit Colorado",
   ],
   authors: [{ name: "Vert Energy Group" }],
   creator: "Vert Energy Group",
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
     title:
       "Colorado BPS Compliance Help | Building Performance Standard",
     description:
-      "Expert Colorado Building Performance Standard compliance services. June/July 2028 deadlines. Energy Use Intensity audits, ECAPP/BERI incentives. Tier 1 & 2 compliance packages.",
+      "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. December 2025 audit/pathway deadline. 3 compliance pathways for buildings ≥50k sq ft.",
     images: [
       {
-        url: "/images/oregon-bps-og.png",
+        url: "/images/colorado-bps-og.png",
         width: 1200,
         height: 630,
         alt: "Colorado BPS Compliance Services",
@@ -67,8 +67,8 @@ export const metadata: Metadata = {
     title:
       "Colorado BPS Compliance Help | Building Performance Standard",
     description:
-      "Expert Colorado Building Performance Standard compliance services. June/July 2028 deadlines. EUI audits, ECAPP/BERI incentives.",
-    images: ["/images/oregon-bps-og.png"],
+      "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. December 2025 audit/pathway deadline. Buildings ≥50k sq ft.",
+    images: ["/images/colorado-bps-og.png"],
   },
   alternates: {
     canonical: "https://co-bps.com",
@@ -77,10 +77,10 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/images/oregon-bps-logo.png", sizes: "32x32", type: "image/png" },
-      { url: "/images/oregon-bps-logo.png", sizes: "192x192", type: "image/png" },
+      { url: "/images/colorado-bps-logo.png", sizes: "32x32", type: "image/png" },
+      { url: "/images/colorado-bps-logo.png", sizes: "192x192", type: "image/png" },
     ],
-    apple: "/images/oregon-bps-logo.png",
+    apple: "/images/colorado-bps-logo.png",
   },
 };
 
@@ -100,20 +100,20 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               name: "Colorado BPS Help Desk",
               description:
-                "Expert Colorado Building Performance Standard compliance services",
+                "Expert Colorado Building Performance Standard (HB 21-1286) compliance services",
               url: "https://co-bps.com",
-              telephone: "(206) 593-4243",
+              telephone: "(206) 309-3936",
               areaServed: {
                 "@type": "State",
-                name: "Oregon",
+                name: "Colorado",
               },
               serviceType: [
                 "Building Performance Standard Compliance",
-                "Energy Use Intensity Audits",
-                "EUI/EUIt Compliance Analysis",
+                "Energy Audits",
+                "Compliance Pathway Selection",
                 "Building Energy Compliance",
-                "ECAPP Incentive Applications",
-                "BERI Grant Support",
+                "HB 21-1286 Compliance",
+                "BEAM Portal Assistance",
               ],
               provider: {
                 "@type": "Organization",
