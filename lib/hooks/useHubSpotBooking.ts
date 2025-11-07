@@ -9,7 +9,7 @@ import type { FormData } from '@/lib/cbps-calculator'
  */
 const CALENDAR_URLS = {
   // Dylan (dheppner) - for 1-2 buildings
-  dylan: 'https://meetings.hubspot.com/dheppner/wa-state-compliance-review',
+  dylan: 'https://meetings.hubspot.com/dheppner/co-state-compliance-review',
   // Kevin - for 3+ buildings (Colorado BPS)
   kevin: 'https://meetings.hubspot.com/kevin-sullivan2/colorado-bps-compliance-review',
 }

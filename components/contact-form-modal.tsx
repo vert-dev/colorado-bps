@@ -259,7 +259,7 @@ function ContactFormModal({ isOpen, onClose, selectedPackage }: ContactFormModal
         // Build calendar URL with routing based on numberOfBuildings
         const buildingCount = parseInt(formData.numberOfBuildings, 10);
         const CALENDAR_URLS = {
-          dylan: 'https://meetings.hubspot.com/dheppner/wa-state-compliance-review',
+          dylan: 'https://meetings.hubspot.com/dheppner/co-state-compliance-review',
           kevin: 'https://meetings.hubspot.com/kevin-sullivan2/colorado-bps-compliance-review',
         };
         const baseUrl = buildingCount >= 3 ? CALENDAR_URLS.kevin : CALENDAR_URLS.dylan;
