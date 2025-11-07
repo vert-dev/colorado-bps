@@ -9,7 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Progress } from "@/components/ui/progress"
 import { Badge } from "@/components/ui/badge"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { CheckCircle, FileText, Settings, Upload, Trophy, Clock, AlertTriangle } from "lucide-react"
+import { CheckCircle, FileText, Settings, Upload, Trophy, Clock, AlertTriangle, Target, TrendingUp } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
 
 interface ComplianceStep {
@@ -17,7 +17,7 @@ interface ComplianceStep {
   title: string
   description: string
   icon: React.ReactNode
-  tier: "both" | "tier1" | "tier2"
+  phase: "annual" | "preparation" | "interim" | "final"
   timeframe: string
   completed: boolean
   urgent?: boolean
@@ -25,62 +25,111 @@ interface ComplianceStep {
 
 const complianceSteps: ComplianceStep[] = [
   {
-    id: "benchmark",
-    title: "Benchmark Your Building",
-    description: "Use EPA's ENERGY STAR Portfolio Manager® to calculate your building's energy use intensity (EUI)",
-    icon: <CheckCircle className="w-6 h-6 text-blue-600" />,
-    tier: "both",
-    timeframe: "Start immediately",
-    completed: false,
-  },
-  {
-    id: "emp",
-    title: "Develop Energy Management Plan",
-    description: "Create and implement a qualifying EMP (Tier 1: 12 months prior, Tier 2: by deadline)",
-    icon: <FileText className="w-6 h-6 text-colorado-gold-600" />,
-    tier: "both",
-    timeframe: "12 months before deadline (Tier 1 only)",
+    id: "portfolio-manager",
+    title: "Set Up Energy Star Portfolio Manager",
+    description: "Create account and connect your building to track energy usage data year-round",
+    icon: <Settings className="w-6 h-6 text-blue-600" />,
+    phase: "annual",
+    timeframe: "Immediate - needed for all reporting",
     completed: false,
     urgent: true,
   },
   {
-    id: "om",
-    title: "Implement O&M Program",
-    description: "Develop and implement Operations & Maintenance Plan (Tier 1: 12 months prior, Tier 2: by deadline)",
-    icon: <Settings className="w-6 h-6 text-amber-600" />,
-    tier: "both",
-    timeframe: "12 months before deadline (Tier 1 only)",
+    id: "beam-portal",
+    title: "Register with BEAM Portal",
+    description: "Create account on Colorado's Building Owner Portal (https://co.beam-portal.org/) for submissions",
+    icon: <Upload className="w-6 h-6 text-colorado-blue-600" />,
+    phase: "annual",
+    timeframe: "Immediate",
     completed: false,
     urgent: true,
   },
   {
-    id: "performance",
-    title: "Meet Performance Targets",
-    description: "Achieve energy use intensity target or implement investment criteria pathway",
-    icon: <Trophy className="w-6 h-6 text-purple-600" />,
-    tier: "tier1",
-    timeframe: "By compliance deadline",
+    id: "annual-benchmark",
+    title: "Submit Annual Benchmarking Report",
+    description: "Submit energy usage data via Portfolio Manager to BEAM Portal and pay $100 annual fee",
+    icon: <FileText className="w-6 h-6 text-orange-600" />,
+    phase: "annual",
+    timeframe: "August 1 each year",
+    completed: false,
+    urgent: true,
+  },
+  {
+    id: "energy-audit",
+    title: "Complete Energy Audit",
+    description: "Hire qualified professional to conduct comprehensive energy audit of your building",
+    icon: <CheckCircle className="w-6 h-6 text-colorado-gold-600" />,
+    phase: "preparation",
+    timeframe: "By December 31, 2025",
+    completed: false,
+    urgent: true,
+  },
+  {
+    id: "pathway-selection",
+    title: "Select Compliance Pathway",
+    description: "Choose one of three pathways: Energy Efficiency, GHG Reduction, or Standard % Reduction",
+    icon: <Target className="w-6 h-6 text-purple-600" />,
+    phase: "preparation",
+    timeframe: "By December 31, 2025",
+    completed: false,
+    urgent: true,
+  },
+  {
+    id: "compliance-plan",
+    title: "File Compliance Plan",
+    description: "Submit formal compliance plan to Colorado Energy Office documenting chosen pathway and strategy",
+    icon: <FileText className="w-6 h-6 text-amber-600" />,
+    phase: "preparation",
+    timeframe: "By December 31, 2025",
+    completed: false,
+    urgent: true,
+  },
+  {
+    id: "interim-target",
+    title: "Meet Interim Performance Target",
+    description: "Achieve 7% reduction from 2021 baseline (EUI or GHG depending on pathway)",
+    icon: <TrendingUp className="w-6 h-6 text-yellow-600" />,
+    phase: "interim",
+    timeframe: "By December 31, 2026",
     completed: false,
   },
   {
-    id: "submit",
-    title: "Submit Documentation",
-    description: "Submit Forms A, B, C (+ D/F if conditional) to WA Department of Commerce",
+    id: "interim-report",
+    title: "Submit Interim Compliance Report",
+    description: "Document achievement of 7% interim target via BEAM Portal",
     icon: <Upload className="w-6 h-6 text-slate-600" />,
-    tier: "both",
-    timeframe: "By compliance deadline",
+    phase: "interim",
+    timeframe: "By December 31, 2026",
+    completed: false,
+  },
+  {
+    id: "final-target",
+    title: "Meet Final Performance Target",
+    description: "Achieve 20% reduction from 2021 baseline (EUI or GHG depending on pathway)",
+    icon: <Trophy className="w-6 h-6 text-colorado-blue-600" />,
+    phase: "final",
+    timeframe: "By December 31, 2030",
+    completed: false,
+  },
+  {
+    id: "final-report",
+    title: "Submit Final Compliance Report",
+    description: "Document achievement of 20% final target via BEAM Portal",
+    icon: <Upload className="w-6 h-6 text-colorado-gold-600" />,
+    phase: "final",
+    timeframe: "By December 31, 2030",
     completed: false,
   },
 ]
 
 export default function InteractiveComplianceChecklist() {
   const [steps, setSteps] = useState(complianceSteps)
-  const [selectedTier, setSelectedTier] = useState<"tier1" | "tier2" | "both">("both")
+  const [selectedPhase, setSelectedPhase] = useState<"annual" | "preparation" | "interim" | "final" | "all">("all")
   const { toast } = useToast()
 
-  const filteredSteps = steps.filter((step) => step.tier === "both" || step.tier === selectedTier)
+  const filteredSteps = selectedPhase === "all" ? steps : steps.filter((step) => step.phase === selectedPhase)
   const completedSteps = filteredSteps.filter((step) => step.completed).length
-  const progressPercentage = (completedSteps / filteredSteps.length) * 100
+  const progressPercentage = filteredSteps.length > 0 ? (completedSteps / filteredSteps.length) * 100 : 0
 
   const handleStepToggle = (stepId: string, completed: boolean) => {
     setSteps((prev) => prev.map((step) => (step.id === stepId ? { ...step, completed } : step)))
@@ -113,29 +162,47 @@ export default function InteractiveComplianceChecklist() {
       <div className="container mx-auto px-4 max-w-4xl">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-slate-800 mb-4">Interactive Compliance Tracker</h2>
-          <p className="text-lg text-slate-700 mb-6">Track your progress through the CBPS compliance process</p>
+          <p className="text-lg text-slate-700 mb-6">Track your progress through the Colorado BPS compliance process</p>
 
-          <div className="flex justify-center gap-3 mb-6">
+          <div className="flex flex-wrap justify-center gap-3 mb-6">
             <Button
-              variant={selectedTier === "both" ? "default" : "outline"}
-              onClick={() => setSelectedTier("both")}
+              variant={selectedPhase === "all" ? "default" : "outline"}
+              onClick={() => setSelectedPhase("all")}
               size="sm"
             >
-              All Requirements
+              All Steps
             </Button>
             <Button
-              variant={selectedTier === "tier1" ? "default" : "outline"}
-              onClick={() => setSelectedTier("tier1")}
+              variant={selectedPhase === "annual" ? "default" : "outline"}
+              onClick={() => setSelectedPhase("annual")}
               size="sm"
+              className="bg-orange-600 hover:bg-orange-700"
             >
-              Tier 1 Buildings
+              Annual (Ongoing)
             </Button>
             <Button
-              variant={selectedTier === "tier2" ? "default" : "outline"}
-              onClick={() => setSelectedTier("tier2")}
+              variant={selectedPhase === "preparation" ? "default" : "outline"}
+              onClick={() => setSelectedPhase("preparation")}
               size="sm"
+              className="bg-red-600 hover:bg-red-700"
             >
-              Tier 2 Buildings
+              2025 Prep
+            </Button>
+            <Button
+              variant={selectedPhase === "interim" ? "default" : "outline"}
+              onClick={() => setSelectedPhase("interim")}
+              size="sm"
+              className="bg-yellow-600 hover:bg-yellow-700"
+            >
+              2026 Interim
+            </Button>
+            <Button
+              variant={selectedPhase === "final" ? "default" : "outline"}
+              onClick={() => setSelectedPhase("final")}
+              size="sm"
+              className="bg-colorado-blue-600 hover:bg-colorado-blue-700"
+            >
+              2030 Final
             </Button>
           </div>
         </div>
@@ -164,7 +231,11 @@ export default function InteractiveComplianceChecklist() {
             <Card
               key={step.id}
               className={`transition-all ${
-                step.completed ? "bg-colorado-blue-50 border-colorado-gold-200" : step.urgent ? "bg-red-50 border-red-200" : "bg-white"
+                step.completed
+                  ? "bg-colorado-blue-50 border-colorado-gold-200"
+                  : step.urgent
+                    ? "bg-red-50 border-red-200"
+                    : "bg-white"
               }`}
             >
               <CardContent className="p-6">
@@ -185,7 +256,7 @@ export default function InteractiveComplianceChecklist() {
                       {step.urgent && !step.completed && (
                         <Badge variant="destructive" className="text-xs">
                           <Clock className="w-3 h-3 mr-1" />
-                          Urgent
+                          Critical
                         </Badge>
                       )}
                       {step.completed && (
@@ -194,12 +265,21 @@ export default function InteractiveComplianceChecklist() {
                           Done
                         </Badge>
                       )}
+                      <Badge variant="outline" className="text-xs">
+                        {step.phase === "annual"
+                          ? "Annual"
+                          : step.phase === "preparation"
+                            ? "2025 Prep"
+                            : step.phase === "interim"
+                              ? "2026 Interim"
+                              : "2030 Final"}
+                      </Badge>
                     </div>
                     <p className={`text-sm mb-2 ${step.completed ? "text-slate-400" : "text-slate-600"}`}>
                       {step.description}
                     </p>
                     <p className="text-xs text-slate-500">
-                      <strong>Timeline:</strong> {step.timeframe}
+                      <strong>Deadline:</strong> {step.timeframe}
                     </p>
                   </div>
                 </div>
@@ -213,8 +293,9 @@ export default function InteractiveComplianceChecklist() {
             <AlertTriangle className="h-4 w-4" />
             <AlertTitle>Next Steps</AlertTitle>
             <AlertDescription>
-              Focus on completing the urgent items first, especially EMP and O&M implementation for Tier 1 buildings.
-              Need help getting started? Our compliance experts can guide you through each step.
+              Focus on completing the December 31, 2025 preparation items (energy audit, pathway selection, compliance
+              plan) to avoid missing the critical first deadline. Need help getting started? Our compliance experts can
+              guide you through each step.
             </AlertDescription>
           </Alert>
         )}
@@ -224,8 +305,8 @@ export default function InteractiveComplianceChecklist() {
             <Trophy className="h-4 w-4 text-colorado-blue-500" />
             <AlertTitle className="text-colorado-blue-700">Compliance Complete!</AlertTitle>
             <AlertDescription className="text-colorado-blue-600">
-              Congratulations! You've completed all required compliance steps. Don't forget to submit your documentation
-              by your deadline.
+              Congratulations! You've completed all required compliance steps. Don't forget to continue annual
+              benchmarking and maintain your performance targets through 2050.
             </AlertDescription>
           </Alert>
         )}
