@@ -2,31 +2,31 @@ import type { Metadata } from "next"
 import PricingPageClient from "./PricingPageClient"
 
 export const metadata: Metadata = {
-  title: "Colorado BPS Compliance Packages | Flat-Fee Pricing Covered by Incentives",
+  title: "Colorado BPS Compliance Packages | Energy Audits & Pathway Selection",
   description:
-    "Colorado BPS compliance packages from $15,000 for Tier 2 buildings. Often $0 net cost with state incentives. Commercial & multifamily packages. Energy Management Plans, O&M Programs. July 2026 deadline approaching.",
+    "Colorado BPS (HB 21-1286) compliance packages for buildings ≥50,000 sq ft. Energy audits, pathway selection, compliance planning. December 31, 2025 critical deadline. Expert guidance for 3 compliance pathways.",
   keywords: [
     "Colorado BPS pricing",
-    "CBPS compliance packages",
-    "Tier 2 compliance cost",
-    "Washington building incentives",
-    "Energy Management Plan cost",
-    "O&M Program pricing",
-    "CBPS flat fee pricing",
-    "Washington energy incentives",
+    "Colorado BPS compliance packages",
+    "HB 21-1286 compliance cost",
+    "Colorado building compliance",
+    "energy audit cost Colorado",
+    "pathway selection",
+    "Colorado BPS flat fee pricing",
+    "December 2025 deadline",
     "commercial building compliance cost",
-    "multifamily building compliance",
-    "July 2026 deadline",
-    "CBPS package pricing",
+    "December 2026 interim target",
+    "Colorado Energy Office compliance",
+    "BEAM Portal assistance",
   ],
   openGraph: {
-    title: "Colorado BPS Compliance Packages | Flat-Fee Pricing",
+    title: "Colorado BPS Compliance Packages | Energy Audits & Pathway Selection",
     description:
-      "CBPS compliance packages from $15k for Tier 2 buildings. Often $0 net cost with state incentives. July 2026 deadline.",
+      "Colorado BPS (HB 21-1286) compliance packages for buildings ≥50k sq ft. Energy audits, 3 pathway options. December 31, 2025 critical deadline.",
     url: "https://co-bps.com/pricing",
     images: [
       {
-        url: "/images/oregon-bps-emblem-hero.png",
+        url: "/images/colorado-bps-og.png",
         width: 1200,
         height: 630,
         alt: "Colorado BPS Compliance Packages",

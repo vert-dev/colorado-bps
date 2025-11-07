@@ -12,35 +12,34 @@ import PenaltiesContent from "@/components/penalties-content"
 import EarlyAdopterIncentives from "@/components/early-adopter-incentives"
 
 export const metadata: Metadata = {
-  title: "Colorado BPS Help Desk | Building Performance Standard Compliance 2028-2030",
+  title: "Colorado BPS Help Desk | Building Performance Standard Compliance December 2025",
   description:
-    "Expert Colorado Building Performance Standard (BPS) compliance services. Tier 1 commercial ≥35k sqft (June 2028-2030), Tier 2 institutional reporting (July 2028). EUI/EUIt audits, ECAPP/BERI grants, compliance packages.",
+    "Expert Colorado Building Performance Standard (HB 21-1286) compliance services for buildings ≥50,000 sq ft. Critical December 31, 2025 deadline for energy audit + pathway selection. 3 compliance pathways.",
   keywords: [
     "Colorado BPS",
-    "Building Performance Standard Oregon",
+    "Building Performance Standard Colorado",
     "HB 21-1286",
-    "Energy Use Intensity",
-    "EUI compliance",
-    "EUIt targets",
-    "Colorado Energy Office compliance",
-    "June 2028 deadline",
-    "ASHRAE Level 2 audit",
-    "ECAPP grants",
-    "BERI funding",
-    "Oregon building compliance",
-    "commercial building energy",
-    "institutional building reporting",
+    "HB21-1286",
+    "December 2025 deadline",
+    "compliance pathway",
+    "energy audit Colorado",
     "Colorado Energy Office",
-    "building energy benchmarking Oregon",
+    "December 2026 interim target",
+    "December 2030 final target",
+    "BEAM Portal",
+    "Colorado building compliance",
+    "50000 sq ft threshold",
+    "energy benchmarking Colorado",
+    "monthly penalties",
   ],
   openGraph: {
     title: "Colorado BPS Help Desk | Building Performance Standard Compliance",
     description:
-      "Expert Colorado BPS compliance help. Tier 1 deadlines June 2028-2030. EUI/EUIt performance targets, ECAPP/BERI incentives, ASHRAE audits for commercial buildings ≥35k sqft.",
+      "Expert Colorado BPS (HB 21-1286) compliance help. December 31, 2025 critical deadline for energy audit + pathway selection. Buildings ≥50k sqft. 3 compliance pathways available.",
     url: "https://co-bps.com",
     images: [
       {
-        url: "/images/oregon-bps-og.png",
+        url: "/images/colorado-bps-og.png",
         width: 1200,
         height: 630,
         alt: "Colorado BPS Help Desk - Building Performance Standard Compliance",
