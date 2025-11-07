@@ -14,13 +14,10 @@ export default function CoverageChecker() {
   const [buildingType, setBuildingType] = useState("")
   const [hasLongVacancy, setHasLongVacancy] = useState(false)
   const [isMixedUse, setIsMixedUse] = useState(false)
-  const [mixedUseDetails, setMixedUseDetails] = useState("")
   const [result, setResult] = useState<{
     status: "covered" | "not-covered" | "exempt" | "complex"
-    tier?: "tier1" | "tier2"
     details?: string
     nextSteps?: string[]
-    forms?: string[]
   } | null>(null)
 
   const checkCoverage = () => {
@@ -30,9 +27,9 @@ export default function CoverageChecker() {
       setResult({
         status: "exempt",
         details:
-          "Buildings with extended vacancy (&gt;50% vacant for 12+ months) may qualify for exemptions. Consult with Commerce for specific determination.",
+          "Buildings with extended vacancy (>50% vacant for 12+ months) may qualify for exemptions. Consult with Colorado Energy Office for specific determination.",
         nextSteps: [
-          "Contact WA Department of Commerce for vacancy exemption determination",
+          "Contact Colorado Energy Office for vacancy exemption determination",
           "Document vacancy periods and occupancy rates",
         ],
       })
@@ -50,16 +47,16 @@ export default function CoverageChecker() {
         details: `${buildingType.charAt(0).toUpperCase() + buildingType.slice(1)} buildings are generally exempt from Colorado BPS requirements, but some exceptions may apply.`,
         nextSteps: [
           "Verify exemption status with qualified professional",
-          "Consider voluntary compliance for incentives",
+          "Consider voluntary compliance for potential future requirements",
         ],
       })
       return
     }
 
-    if (sqft < 20000) {
+    if (sqft < 50000) {
       setResult({
         status: "not-covered",
-        details: "Buildings under 20,000 sq ft are not covered by Colorado BPS.",
+        details: "Buildings under 50,000 sq ft are not covered by Colorado BPS.",
       })
       return
     }
@@ -70,7 +67,7 @@ export default function CoverageChecker() {
         details:
           "Mixed-use buildings require individual assessment based on predominant use and square footage allocation. Coverage depends on the primary building function.",
         nextSteps: [
-          "Determine predominant use (&gt;50% of floor area)",
+          "Determine predominant use (>50% of floor area)",
           "Calculate square footage by use type",
           "Consult with qualified professional for classification",
           "Consider each use type's compliance requirements",
@@ -79,96 +76,22 @@ export default function CoverageChecker() {
       return
     }
 
-    // Tier 1: Commercial buildings 35k+ sq ft (performance-based)
-    if (buildingType === "commercial" && sqft >= 35000) {
-      const deadline =
-        sqft >= 100000 ? "June 2028" : sqft >= 50000 ? "June 2029" : "June 2030"
+    // All covered buildings ≥50,000 sq ft have same requirements
+    if (sqft >= 50000) {
       setResult({
         status: "covered",
-        tier: "tier1",
         details:
-          `Your commercial building is Tier 1 - must meet EUI performance targets by ${deadline}. Penalties apply for non-compliance.`,
+          `Your building is covered by Colorado BPS - all buildings ≥50,000 sq ft must comply with the same requirements.`,
         nextSteps: [
-          "Complete energy benchmarking in ENERGY STAR Portfolio Manager",
-          "Determine your building's EUI (Energy Use Intensity)",
-          "Compare EUI to your building-type EUIt (target)",
-          "Complete ASHRAE Level 2 energy audit if EUI exceeds EUIt",
-          "Implement energy efficiency improvements to achieve EUIt",
-          "Apply for ECAPP/BERI incentives for early compliance",
+          "Set up Energy Star Portfolio Manager account (immediate)",
+          "Register with Colorado BEAM Portal at https://co.beam-portal.org/ (immediate)",
+          "Submit annual benchmarking report by August 1 each year (with $100 fee)",
+          "Complete energy audit by December 31, 2025",
+          "Select compliance pathway (Energy Efficiency, GHG Reduction, or Standard %) by December 31, 2025",
+          "File compliance plan with Colorado Energy Office by December 31, 2025",
+          "Meet interim target (7% reduction) by December 31, 2026",
+          "Meet final target (20% reduction) by December 31, 2030",
         ],
-        forms: [],
-      })
-      return
-    }
-
-    if (buildingType === "hotel" && sqft >= 35000) {
-      const deadline =
-        sqft >= 100000 ? "June 2028" : sqft >= 50000 ? "June 2029" : "June 2030"
-      setResult({
-        status: "covered",
-        tier: "tier1",
-        details:
-          `Your hotel is Tier 1 - must meet EUI performance targets by ${deadline}. Penalties apply for non-compliance.`,
-        nextSteps: [
-          "Complete energy benchmarking using hotel-specific metrics",
-          "Determine your building's EUI",
-          "Compare EUI to hotel building-type EUIt target",
-          "Complete energy audit if needed",
-          "Implement improvements to achieve compliance",
-        ],
-        forms: [],
-      })
-      return
-    }
-
-    // Tier 2: Commercial 20k-35k sq ft OR ALL institutional 35k+ sq ft (reporting only)
-    if (
-      (buildingType === "commercial" && sqft >= 20000 && sqft < 35000) ||
-      (buildingType === "hotel" && sqft >= 20000 && sqft < 35000)
-    ) {
-      setResult({
-        status: "covered",
-        tier: "tier2",
-        details:
-          "Your building is Tier 2 - reporting-only requirements (NO performance targets, NO penalties). Just benchmark and report energy data.",
-        nextSteps: [
-          "Complete energy benchmarking in ENERGY STAR Portfolio Manager",
-          "Submit annual energy data to Colorado Energy Office by July 2028",
-          "Continue annual reporting - no performance targets required",
-        ],
-        forms: [],
-      })
-      return
-    }
-
-    // Institutional buildings (schools, hospitals, government) - ALL 35k+ go to Tier 2
-    if (buildingType === "public" && sqft >= 35000) {
-      setResult({
-        status: "covered",
-        tier: "tier2",
-        details:
-          "Your institutional building is Tier 2 - reporting-only (NO performance targets, NO penalties). Colorado BPS treats all institutional buildings 35k+ sqft as Tier 2.",
-        nextSteps: [
-          "Complete energy benchmarking in ENERGY STAR Portfolio Manager",
-          "Submit annual energy data to Colorado Energy Office by July 2028",
-          "Continue annual reporting - no performance targets or penalties",
-        ],
-        forms: [],
-      })
-      return
-    }
-
-    if (buildingType === "public" && sqft >= 20000 && sqft < 35000) {
-      setResult({
-        status: "covered",
-        tier: "tier2",
-        details:
-          "Your institutional building is Tier 2 - reporting-only requirements (NO penalties).",
-        nextSteps: [
-          "Complete energy benchmarking in ENERGY STAR Portfolio Manager",
-          "Submit annual energy data to Colorado Energy Office by July 2028",
-        ],
-        forms: [],
       })
       return
     }
@@ -198,7 +121,7 @@ export default function CoverageChecker() {
               <Input
                 id="square-footage"
                 type="number"
-                placeholder="e.g., 25000"
+                placeholder="e.g., 75000"
                 value={squareFootage}
                 onChange={(e) => setSquareFootage(e.target.value)}
                 className="mt-2"
@@ -216,7 +139,7 @@ export default function CoverageChecker() {
                   <SelectItem value="commercial">Commercial Office</SelectItem>
                   <SelectItem value="multifamily">Multifamily Residential</SelectItem>
                   <SelectItem value="hotel">Hotel/Motel</SelectItem>
-                  <SelectItem value="public">Public Building</SelectItem>
+                  <SelectItem value="public">Public/Institutional Building</SelectItem>
                   <SelectItem value="warehouse">Warehouse/Distribution</SelectItem>
                   <SelectItem value="industrial">Industrial</SelectItem>
                   <SelectItem value="manufacturing">Manufacturing</SelectItem>
@@ -259,39 +182,32 @@ export default function CoverageChecker() {
                   <CheckCircle className="w-6 h-6 mt-1" />
                   <div className="w-full">
                     <p className="font-semibold">
-                      Your building is covered by Colorado BPS - {result.tier === "tier1" ? "Tier 1" : "Tier 2"}
+                      Your building is covered by Colorado BPS
                     </p>
                     <p className="text-sm mt-1">{result.details}</p>
 
-                    {result.tier === "tier1" && (
-                      <div className="mt-2 text-xs bg-red-50 text-red-700 p-2 rounded">
-                        <strong>Penalty if non-compliant:</strong> $5,000 + $1.00/sq ft annually until compliant.
-                        For {squareFootage} sq ft: ${(5000 + Number.parseInt(squareFootage)).toLocaleString()}/year.
+                    <div className="mt-3 space-y-2">
+                      <div className="text-xs bg-red-50 text-red-700 p-3 rounded">
+                        <strong>Critical First Deadline: December 31, 2025</strong>
+                        <p className="mt-1">Complete energy audit, select compliance pathway (Energy Efficiency, GHG Reduction, or Standard % Reduction), and file compliance plan.</p>
                       </div>
-                    )}
-                    {result.tier === "tier2" && (
-                      <div className="mt-2 text-xs bg-colorado-blue-50 text-colorado-blue-700 p-2 rounded">
-                        <strong>Good News:</strong> Tier 2 has NO PENALTIES in Colorado BPS. Reporting-only requirement.
+                      <div className="text-xs bg-orange-50 text-orange-700 p-3 rounded">
+                        <strong>Annual Benchmarking: August 1 each year</strong>
+                        <p className="mt-1">Submit energy data via Portfolio Manager to BEAM Portal with $100 fee. Penalties: $500 (first failure), $2,000 (subsequent).</p>
                       </div>
-                    )}
-
-                    {result.forms && (
-                      <div className="mt-3">
-                        <p className="text-sm font-medium">Required Forms:</p>
-                        <ul className="text-xs mt-1 space-y-1">
-                          {result.forms.map((form, index) => (
-                            <li key={index} className="flex items-center gap-1">
-                              <div className="w-1 h-1 bg-colorado-blue-600 rounded-full"></div>
-                              {form}
-                            </li>
-                          ))}
-                        </ul>
+                      <div className="text-xs bg-yellow-50 text-yellow-700 p-3 rounded">
+                        <strong>Interim Target: December 31, 2026</strong>
+                        <p className="mt-1">Achieve 7% reduction from 2021 baseline. Monthly penalties begin June 1, 2027 if non-compliant.</p>
                       </div>
-                    )}
+                      <div className="text-xs bg-colorado-blue-50 text-colorado-blue-700 p-3 rounded">
+                        <strong>Final Target: December 31, 2030</strong>
+                        <p className="mt-1">Achieve 20% reduction from 2021 baseline. Monthly penalties begin June 1, 2031 if non-compliant.</p>
+                      </div>
+                    </div>
 
                     {result.nextSteps && (
                       <div className="mt-3">
-                        <p className="text-sm font-medium">Next Steps:</p>
+                        <p className="text-sm font-medium">Complete Compliance Roadmap:</p>
                         <ul className="text-xs mt-1 space-y-1">
                           {result.nextSteps.map((step, index) => (
                             <li key={index} className="flex items-start gap-1">
@@ -363,25 +279,21 @@ export default function CoverageChecker() {
                     <div className="text-sm">
                       <p className="font-semibold text-slate-800 mb-1">Early Compliance Success:</p>
                       <p className="text-slate-700">
-                        "Northwest Commercial Properties secured ECAPP grant funding for their 85,000 sq ft office building's
-                        ASHRAE Level 2 audit and BERI implementation grants for HVAC modernization. Achieving compliance 18
-                        months early avoided $105,000/year in penalties and reduced operating costs by 23%."
+                        Building owners who start early have time to evaluate all three compliance pathways, secure the best energy auditors, and plan capital improvements strategically. Those who wait until late 2025 face rushed decisions, limited contractor availability, and higher costs.
                       </p>
                     </div>
                   </div>
-                  <div className="bg-yellow-100 border border-yellow-300 p-3 rounded text-sm">
-                    <p className="font-semibold text-yellow-800 mb-1">⚠️ Limited Time: ECAPP/BERI Funding</p>
-                    <p className="text-yellow-700">
-                      ECAPP ($2M state) and BERI ($12M federal) funds are competitive and limited. Early applicants have
-                      the best chance of securing grants. ECAPP available through 2027 - apply early to maximize your
-                      chances.
+                  <div className="bg-red-100 border border-red-300 p-3 rounded text-sm">
+                    <p className="font-semibold text-red-800 mb-1">⚠️ Critical: December 31, 2025 Deadline</p>
+                    <p className="text-red-700">
+                      Missing the December 31, 2025 audit and pathway selection deadline may result in penalties or forced pathway assignment. Start your energy audit in early 2025 to ensure timely completion.
                     </p>
                   </div>
                 </div>
 
                 <div className="text-center">
                   <p className="text-sm text-slate-600 mb-3">
-                    Get a personalized compliance assessment and action plan for your building
+                    Get a personalized compliance assessment and pathway recommendation for your building
                   </p>
                   <Button
                     className="bg-colorado-blue-600 hover:bg-colorado-blue-700 text-white px-6 py-2 mb-2"
@@ -392,7 +304,7 @@ export default function CoverageChecker() {
                       }
                     }}
                   >
-                    Get Your Free Assessment & Action Plan
+                    Get Your Free Assessment & Pathway Analysis
                   </Button>
                   <p className="text-xs text-slate-500">Free consultation • No obligation • Expert guidance</p>
                 </div>
@@ -406,27 +318,26 @@ export default function CoverageChecker() {
           <p className="text-slate-600 mb-4">Colorado BPS Coverage Summary:</p>
           <div className="grid md:grid-cols-2 gap-4 text-sm">
             <div className="bg-colorado-blue-50 p-4 rounded-lg border border-colorado-gold-200">
-              <h4 className="font-semibold text-colorado-blue-700 mb-2">Tier 1 Buildings</h4>
+              <h4 className="font-semibold text-colorado-blue-700 mb-2">Covered Buildings</h4>
               <ul className="text-colorado-blue-600 space-y-1 text-left">
-                <li>• Commercial buildings ≥35,000 sq ft</li>
-                <li>• Must meet EUI performance targets (EUIt)</li>
-                <li>• Compliance deadlines: June 2028-2030 (by size)</li>
-                <li>• Penalties: $5,000 + $1/sq ft annually if non-compliant</li>
+                <li>• All buildings ≥50,000 sq ft</li>
+                <li>• Commercial, residential, institutional</li>
+                <li>• Single performance standard (no tiers)</li>
+                <li>• Choose 1 of 3 compliance pathways</li>
               </ul>
             </div>
-            <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-              <h4 className="font-semibold text-blue-800 mb-2">Tier 2 Buildings</h4>
-              <ul className="text-blue-700 space-y-1 text-left">
-                <li>• Commercial buildings 20,000-34,999 sq ft</li>
-                <li>• ALL institutional buildings ≥35,000 sq ft</li>
-                <li>• Reporting deadline: July 2028</li>
-                <li>• Reporting-only (NO performance targets, NO penalties)</li>
+            <div className="bg-red-50 p-4 rounded-lg border border-red-200">
+              <h4 className="font-semibold text-red-800 mb-2">Key Deadlines</h4>
+              <ul className="text-red-700 space-y-1 text-left">
+                <li>• Aug 1 annually: Benchmarking ($100 fee)</li>
+                <li>• Dec 31, 2025: Audit + pathway selection</li>
+                <li>• Dec 31, 2026: Interim target (7%)</li>
+                <li>• Dec 31, 2030: Final target (20%)</li>
               </ul>
             </div>
           </div>
           <p className="text-sm text-slate-500 mt-4">
-            Exemptions may apply for certain building types (check OAR 330-140 for complete exemption list).
-            Portland buildings may have additional local benchmarking requirements.
+            Exemptions may apply for certain building types (industrial, manufacturing, agricultural, warehouse). Consult Colorado Energy Office for specific exemption determination.
           </p>
         </div>
       </div>
