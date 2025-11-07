@@ -49,7 +49,7 @@ export default function WebinarSignupClientPage() {
       formDataToSend.append("form_type", "webinar_registration")
       formDataToSend.append("timestamp", new Date().toISOString())
 
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/885017/uhzbn5c/", {
+      const response = await fetch("https://hooks.zapier.com/hooks/catch/885017/uswjibw/", {
         method: "POST",
         body: formDataToSend,
       })
