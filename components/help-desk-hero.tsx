@@ -38,7 +38,7 @@ export default function HelpDeskHero() {
                 <h1 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-2">
                   Colorado BPS Compliance — Fast, Simple, Guaranteed
                 </h1>
-                <p className="text-lg text-yellow-200 font-medium">(CBPS) Help Desk</p>
+                <p className="text-lg text-yellow-200 font-medium">(BPS) Help Desk</p>
               </div>
 
               <p className="text-xl text-colorado-blue-50 leading-relaxed mb-8">
