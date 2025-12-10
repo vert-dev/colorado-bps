@@ -1,57 +1,43 @@
 import { NextRequest, NextResponse } from "next/server"
 
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
-const SUPPRESSION_GROUP_ID = process.env.SENDGRID_SUPPRESSION_GROUP_ID || "260189"
+// Legacy endpoint for backward compatibility with ?e= base64 links
+// Proxies to vertbuild backend for centralized SendGrid management
+
+const VERTBUILD_API_URL = process.env.VERTBUILD_API_URL || "https://vertbuild-monorepobackend-production-7b69.up.railway.app"
+const SUPPRESSION_GROUP_ID = process.env.SENDGRID_SUPPRESSION_GROUP_ID || "260189" // Default to WA group, override in env
 
 export async function POST(request: NextRequest) {
   try {
-    const { email } = await request.json()
+    const body = await request.json()
+    const { email } = body
 
-    if (!email || !email.includes("@")) {
-      return NextResponse.json(
-        { error: "Invalid email address" },
-        { status: 400 }
-      )
+    if (!email || typeof email !== "string" || !email.includes("@")) {
+      return NextResponse.json({ error: "Valid email required" }, { status: 400 })
     }
 
-    if (!SENDGRID_API_KEY) {
-      console.error("SENDGRID_API_KEY not configured")
-      return NextResponse.json(
-        { error: "Email service not configured" },
-        { status: 500 }
-      )
-    }
-
-    // Add email to SendGrid suppression group
+    // Proxy to vertbuild backend - use direct suppression endpoint
     const response = await fetch(
-      `https://api.sendgrid.com/v3/asm/groups/${SUPPRESSION_GROUP_ID}/suppressions`,
+      `${VERTBUILD_API_URL}/api/email/unsubscribe/add-suppression`,
       {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${SENDGRID_API_KEY}`,
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          recipient_emails: [email.toLowerCase()],
+          email: email.toLowerCase(),
+          groupId: SUPPRESSION_GROUP_ID
         }),
       }
     )
 
     if (!response.ok) {
-      const errorText = await response.text()
-      console.error("SendGrid error:", response.status, errorText)
-      return NextResponse.json(
-        { error: "Failed to process unsubscribe" },
-        { status: 500 }
-      )
+      const errorData = await response.text()
+      console.error("Vertbuild unsubscribe error:", response.status, errorData)
+      return NextResponse.json({ error: "Failed to process unsubscribe" }, { status: 500 })
     }
 
-    return NextResponse.json({ success: true })
+    const result = await response.json()
+    return NextResponse.json(result)
   } catch (error) {
     console.error("Unsubscribe error:", error)
-    return NextResponse.json(
-      { error: "An unexpected error occurred" },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: "Failed to process request" }, { status: 500 })
   }
 }
