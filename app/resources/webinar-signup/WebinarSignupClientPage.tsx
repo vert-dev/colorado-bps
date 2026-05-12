@@ -95,7 +95,7 @@ export default function WebinarSignupClientPage() {
             <h1 className="text-3xl font-bold text-slate-800 mb-4">You're Registered!</h1>
             <p className="text-slate-600 mb-6">
               We've sent you a calendar invite and webinar link. The session will cover everything you need to know
-              about Tier 2 compliance.
+              about Colorado BPS compliance.
             </p>
             <div className="flex gap-4 justify-center">
               <Button asChild className="bg-slate-800 hover:bg-slate-900">
@@ -127,8 +127,8 @@ export default function WebinarSignupClientPage() {
               <Video className="w-8 h-8 text-blue-600" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-slate-800">Tier 2 Requirements Webinar</h1>
-              <p className="text-slate-600">Live expert session on Tier 2 compliance and early adopter incentives</p>
+              <h1 className="text-3xl font-bold text-slate-800">Colorado BPS Requirements Webinar</h1>
+              <p className="text-slate-600">Live expert session on Colorado BPS compliance, pathway selection, and federal + utility incentive stacking</p>
             </div>
           </div>
 
@@ -154,7 +154,7 @@ export default function WebinarSignupClientPage() {
               <ul className="space-y-2">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
-                  <span className="text-slate-700 text-sm">Tier 2 compliance requirements breakdown</span>
+                  <span className="text-slate-700 text-sm">Colorado BPS compliance requirements breakdown</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />

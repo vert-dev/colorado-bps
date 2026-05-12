@@ -224,7 +224,7 @@ export default function UnsubscribePage() {
   }
 
   // Default: Confirmation state
-  const brandName = tokenInfo?.brandConfig?.name || "Washington CBPS"
+  const brandName = tokenInfo?.brandConfig?.name || "Colorado BPS"
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-colorado-blue-50 to-colorado-blue-100 flex items-center justify-center px-4">

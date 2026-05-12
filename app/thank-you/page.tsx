@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "Thank you for your Colorado BPS compliance inquiry. We'll contact you within 24 hours with your custom assessment, penalty risk calculation, and incentive eligibility review.",
   keywords: [
-    "CBPS compliance inquiry",
+    "Colorado BPS compliance inquiry",
     "Colorado BPS assessment",
     "building compliance consultation",
-    "CBPS penalty risk",
+    "Colorado BPS penalty risk",
     "energy incentive eligibility",
     "compliance roadmap",
-    "Oregon building compliance",
+    "Colorado building compliance",
   ],
   robots: {
     index: false, // Don't index thank you pages
@@ -102,7 +102,7 @@ export default function ThankYouPage() {
                 "@type": "ContactPoint",
                 telephone: "+1-206-593-4243",
                 contactType: "Customer Service",
-                areaServed: "Oregon",
+                areaServed: "Colorado",
                 availableLanguage: "English",
               },
             }),

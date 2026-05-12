@@ -20,10 +20,10 @@ export default function TrustStrip() {
             <div className="text-center">
               <h3 className="font-medium text-slate-900 mb-3">Verified sources</h3>
               <div className="flex flex-wrap justify-center gap-2 text-xs">
-                <span className="bg-white px-2 py-1 rounded border text-slate-600">WA Dept. Commerce</span>
-                <span className="bg-white px-2 py-1 rounded border text-slate-600">Official FAQs</span>
-                <span className="bg-white px-2 py-1 rounded border text-slate-600">EUIt Tables</span>
-                <span className="bg-white px-2 py-1 rounded border text-slate-600">Office Hours</span>
+                <span className="bg-white px-2 py-1 rounded border text-slate-600">Colorado Energy Office</span>
+                <span className="bg-white px-2 py-1 rounded border text-slate-600">CDPHE Regulation 28</span>
+                <span className="bg-white px-2 py-1 rounded border text-slate-600">BEAM Portal</span>
+                <span className="bg-white px-2 py-1 rounded border text-slate-600">HB 21-1286</span>
               </div>
             </div>
 

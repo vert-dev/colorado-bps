@@ -8,6 +8,7 @@ import CBPSChatbot from "@/components/cbps-chatbot"; // Added import for CBPSCha
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://co-bps.com"),
   title:
     "Colorado BPS Compliance Help | Building Performance Standard Expert Services",
   description:

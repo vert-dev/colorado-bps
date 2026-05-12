@@ -449,10 +449,10 @@ function ContactFormModal({ isOpen, onClose, selectedPackage }: ContactFormModal
                   <SelectValue placeholder="Select size range" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="20k-50k">20,000 - 50,000 sq ft (Tier 2)</SelectItem>
-                  <SelectItem value="50k-90k">50,000 - 90,000 sq ft (Tier 1)</SelectItem>
-                  <SelectItem value="90k-220k">90,000 - 220,000 sq ft (Tier 1)</SelectItem>
-                  <SelectItem value="220k+">220,000+ sq ft (Tier 1)</SelectItem>
+                  <SelectItem value="under-50k">Under 50,000 sq ft (Not Covered)</SelectItem>
+                  <SelectItem value="50k-90k">50,000 - 90,000 sq ft (Covered)</SelectItem>
+                  <SelectItem value="90k-220k">90,000 - 220,000 sq ft (Covered)</SelectItem>
+                  <SelectItem value="220k+">220,000+ sq ft (Covered)</SelectItem>
                   <SelectItem value="multiple">Multiple Buildings</SelectItem>
                 </SelectContent>
               </Select>
@@ -484,7 +484,7 @@ function ContactFormModal({ isOpen, onClose, selectedPackage }: ContactFormModal
               id="message"
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
-              placeholder="Please list your properties with addresses, square footage, and building types. Example: 123 Main St, Seattle - 45,000 sq ft Office Building..."
+              placeholder="Please list your properties with addresses, square footage, and building types. Example: 123 Main St, Denver, CO — 75,000 sq ft Office Building..."
               rows={4}
               disabled={isSubmitting}
             />

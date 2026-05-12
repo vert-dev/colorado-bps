@@ -81,9 +81,9 @@ export default function PrivacyPolicy() {
                 <p className="text-slate-700">
                   <strong>Vert Energy Group</strong>
                   <br />
-                  123 Energy Way
+                  Serving Colorado building owners
                   <br />
-                  Seattle, WA 98101
+                  Denver, CO
                   <br />
                   Email: privacy@vertenergy.com
                   <br />

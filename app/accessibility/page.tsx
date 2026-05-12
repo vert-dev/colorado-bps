@@ -66,9 +66,9 @@ export default function Accessibility() {
                   <br />
                   Vert Energy Group
                   <br />
-                  123 Energy Way
+                  Serving Colorado building owners
                   <br />
-                  Seattle, WA 98101
+                  Denver, CO
                   <br />
                   Email: accessibility@vertenergy.com
                   <br />

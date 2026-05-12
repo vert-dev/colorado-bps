@@ -15,12 +15,6 @@ export default function HelpDeskHero() {
     <>
       <section className="relative bg-gradient-to-b from-colorado-blue-800 to-colorado-blue-700 py-16 lg:py-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/seattle-skyline.png"
-            alt="Seattle Skyline"
-            fill
-            className="object-cover object-bottom opacity-40"
-          />
           <div className="absolute inset-0 bg-gradient-to-b from-colorado-blue-800/70 via-colorado-blue-700/60 to-colorado-blue-800/80" />
         </div>
 

@@ -28,11 +28,12 @@ export default function ValueCards() {
             <Card className="bg-white border-2 hover:shadow-lg transition-shadow">
               <CardHeader className="text-center">
                 <BookOpen className="w-12 h-12 text-colorado-blue-500 mx-auto mb-4" />
-                <CardTitle className="text-lg">EUIt Cheat Sheet</CardTitle>
+                <CardTitle className="text-lg">Pathway Selection Cheat Sheet</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-slate-600 text-center">
-                  Activity type quick reference to help you map your building's energy use correctly.
+                  Side-by-side comparison of Colorado's three compliance pathways (Targeted EUI, GHG, Standard %)
+                  to help you pick the right one.
                 </p>
               </CardContent>
             </Card>
