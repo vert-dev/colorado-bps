@@ -3,13 +3,13 @@
  *
  * Usage in SendGrid templates:
  *   Instead of: {{{unsubscribe}}}
- *   Use: https://washingtoncbps.com/unsubscribe?e={{base64_email}}
+ *   Use: https://co-bps.com/unsubscribe?e={{base64_email}}
  *
  * To generate links programmatically:
  *   const link = generateUnsubscribeLink("user@example.com")
  */
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://washingtoncbps.com"
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || "https://co-bps.com"
 
 /**
  * Generate a base64-encoded unsubscribe link
@@ -38,7 +38,7 @@ export function decodeUnsubscribeEmail(encoded: string): string | null {
  * For SendGrid Dynamic Templates:
  *
  * In your template, add a custom unsubscribe link:
- * <a href="https://washingtoncbps.com/unsubscribe?e={{base64_email}}">Unsubscribe</a>
+ * <a href="https://co-bps.com/unsubscribe?e={{base64_email}}">Unsubscribe</a>
  *
  * When sending emails via SendGrid API, include base64_email in dynamic_template_data:
  *

@@ -17,7 +17,7 @@ export default function HeroMasterclass() {
   })
 
   useEffect(() => {
-    const targetDate = new Date("2027-07-01T00:00:00-07:00").getTime() // Pacific Time
+    const targetDate = new Date("2025-12-31T23:59:59-07:00").getTime() // Mountain Time
 
     const updateTimer = () => {
       const now = new Date().getTime()
@@ -49,9 +49,9 @@ export default function HeroMasterclass() {
             <div className="flex items-center space-x-3">
               <Clock className="w-6 h-6" />
               <div>
-                <h3 className="font-bold text-lg">URGENT: Tier 2 Multifamily Buildings</h3>
+                <h3 className="font-bold text-lg">URGENT: All Covered Buildings ≥50,000 sq ft</h3>
                 <p className="text-sm">
-                  EMP & O&M must be complete and implemented by July 1, 2027 (compliance deadline)
+                  Energy audit, compliance plan, and pathway selection due December 31, 2025
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function HeroMasterclass() {
                 <div className="text-xs">MINS</div>
               </div>
               <div className="bg-white text-red-600 px-3 py-2 rounded font-bold text-sm">
-                $150M Limited Funding Available
+                Federal IRA + Utility Rebates Available
               </div>
             </div>
           </div>
@@ -80,12 +80,12 @@ export default function HeroMasterclass() {
             <div className="flex items-center space-x-3 mb-4">
               <Scale className="w-8 h-8 text-slate-700" />
               <span className="text-sm font-medium text-slate-600 bg-slate-200 px-3 py-1 rounded-full">
-                RCW 19.27A.210 - Building Performance Standard
+                HB 21-1286 / CDPHE Regulation 28 — Building Performance Standard
               </span>
             </div>
 
             <h1 className="text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
-              Colorado Building Performance Standard (CBPS)
+              Colorado Building Performance Standards (BPS)
               <span className="block text-2xl lg:text-3xl text-slate-700 mt-2">
                 Compliance Requirements & Deadlines
               </span>
@@ -93,8 +93,8 @@ export default function HeroMasterclass() {
 
             <div className="flex items-center space-x-4">
               <Image
-                src="/images/oregon-bps-logo.png"
-                alt="CBPS Washington - Building Performance Standard"
+                src="/images/colorado-bps-logo.png"
+                alt="Colorado BPS - Building Performance Standard"
                 width={120}
                 height={72}
                 className="h-16 w-auto"
@@ -102,10 +102,11 @@ export default function HeroMasterclass() {
                 style={{ background: "transparent" }}
               />
               <div className="bg-slate-100 border-l-4 border-slate-600 p-4 rounded-r flex-1">
-                <p className="text-sm font-medium text-slate-800 mb-2">Official Law Text (RCW 19.27A.210):</p>
+                <p className="text-sm font-medium text-slate-800 mb-2">Authority: HB 21-1286 (2021) — Energy Performance for Buildings:</p>
                 <p className="text-sm text-slate-700 italic">
-                  "The owner of a covered commercial building shall meet energy performance standards... and complete
-                  benchmarking and energy management planning requirements..."
+                  "Owners of covered buildings ≥50,000 sq ft must benchmark annually, file an energy audit and
+                  compliance plan, and meet the interim (2026) and final (2030) performance targets under their
+                  selected pathway."
                 </p>
               </div>
             </div>
@@ -114,13 +115,13 @@ export default function HeroMasterclass() {
               <div className="flex items-start space-x-3">
                 <DollarSign className="w-6 h-6 text-colorado-blue-500 mt-1" />
                 <div>
-                  <h3 className="font-bold text-colorado-blue-800 mb-2">Early Adopter Incentives Available</h3>
+                  <h3 className="font-bold text-colorado-blue-800 mb-2">Federal + Utility Incentives Available</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div>
-                      <p className="font-semibold text-colorado-blue-700">Tier 2 Base: $0.30 per sq ft</p>
+                      <p className="font-semibold text-colorado-blue-700">IRA 179D: up to $5/sq ft tax deduction</p>
                     </div>
                     <div>
-                      <p className="font-semibold text-colorado-blue-700">Multifamily Enhanced: $0.75 per sq ft</p>
+                      <p className="font-semibold text-colorado-blue-700">Xcel + Black Hills rebates: project-specific</p>
                     </div>
                   </div>
                 </div>
@@ -135,7 +136,7 @@ export default function HeroMasterclass() {
                   <Calendar className="w-8 h-8 text-red-600" />
                   <Users className="w-8 h-8 text-red-600" />
                 </div>
-                <h2 className="text-xl font-bold text-red-900">Free CBPS Masterclass</h2>
+                <h2 className="text-xl font-bold text-red-900">Free Colorado BPS Masterclass</h2>
                 <p className="text-sm text-slate-700">
                   Join our compliance workshop to avoid penalties and maximize incentives
                 </p>
@@ -149,7 +150,7 @@ export default function HeroMasterclass() {
                   </DialogTrigger>
                   <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
                     <DialogHeader>
-                      <DialogTitle>CBPS Compliance Masterclass - Reserve Your Seat</DialogTitle>
+                      <DialogTitle>Colorado BPS Compliance Masterclass - Reserve Your Seat</DialogTitle>
                     </DialogHeader>
                     <div className="p-4">
                       <div

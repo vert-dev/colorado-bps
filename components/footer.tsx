@@ -14,9 +14,9 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold text-white mb-4">Vert Energy Group</h3>
               <address className="text-sm not-italic">
-                123 Energy Way
+                Serving building owners across Colorado
                 <br />
-                Seattle, WA 98101
+                Denver, CO
                 <br />
                 (555) 123-4567
               </address>

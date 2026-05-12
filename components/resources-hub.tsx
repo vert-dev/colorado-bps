@@ -51,7 +51,8 @@ export default function ResourcesHub() {
             </div>
             <h3 className="font-semibold text-slate-800 mb-3">Colorado BPS Summary Guide</h3>
             <p className="text-sm text-slate-600 mb-4">
-              Complete overview of Tier 1 & Tier 2 requirements, EUI/EUIt targets, deadlines, and compliance pathways.
+              Complete overview of HB 21-1286 requirements, the three compliance pathways, deadlines, and 2021
+              baseline rules for buildings ≥50,000 sq ft.
             </p>
             <Button
               variant="outline"
@@ -60,8 +61,8 @@ export default function ResourcesHub() {
               onClick={() =>
                 handleDownload(
                   "Colorado BPS Summary Guide",
-                  "Complete overview of Tier 1 & Tier 2 requirements, EUI/EUIt targets, deadlines, and compliance pathways",
-                  "oregon-bps-summary-guide.pdf",
+                  "Complete overview of HB 21-1286 requirements, the three compliance pathways, deadlines, and 2021 baseline rules for buildings ≥50,000 sq ft",
+                  "colorado-bps-summary-guide.pdf",
                 )
               }
             >
@@ -77,7 +78,8 @@ export default function ResourcesHub() {
             </div>
             <h3 className="font-semibold text-slate-800 mb-3">Colorado BPS Requirements Webinar</h3>
             <p className="text-sm text-slate-600 mb-4">
-              Live webinar explaining Colorado BPS compliance requirements, EUI/EUIt targets, and ECAPP/BERI incentives.
+              Live webinar explaining Colorado BPS compliance requirements, the three pathways, and federal IRA + utility
+              incentive stacking.
             </p>
             <Button variant="outline" size="sm" className="w-full bg-transparent" onClick={handleWebinarSignup}>
               <ExternalLink className="w-4 h-4 mr-2" />
@@ -90,9 +92,10 @@ export default function ResourcesHub() {
             <div className="w-12 h-12 bg-colorado-blue-100 rounded-lg flex items-center justify-center mb-4">
               <CheckSquare className="w-6 h-6 text-colorado-gold-600" />
             </div>
-            <h3 className="font-semibold text-slate-800 mb-3">EUI Compliance Checklist</h3>
+            <h3 className="font-semibold text-slate-800 mb-3">Audit + Pathway Selection Checklist</h3>
             <p className="text-sm text-slate-600 mb-4">
-              Step-by-step checklist for benchmarking, audits, and implementing energy improvements to meet EUIt targets.
+              Step-by-step checklist for benchmarking, ASHRAE Level 2 audits, choosing the right pathway, and filing
+              your compliance plan by December 31, 2025.
             </p>
             <Button
               variant="outline"
@@ -100,9 +103,9 @@ export default function ResourcesHub() {
               className="w-full bg-transparent"
               onClick={() =>
                 handleDownload(
-                  "EUI Compliance Checklist",
-                  "Step-by-step checklist for benchmarking, audits, and implementing energy improvements to meet EUIt targets",
-                  "eui-compliance-checklist.pdf",
+                  "Audit + Pathway Selection Checklist",
+                  "Step-by-step checklist for benchmarking, ASHRAE Level 2 audits, choosing the right pathway, and filing your compliance plan by December 31, 2025",
+                  "audit-pathway-checklist.pdf",
                 )
               }
             >
@@ -116,9 +119,10 @@ export default function ResourcesHub() {
             <div className="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center mb-4">
               <DollarSign className="w-6 h-6 text-amber-600" />
             </div>
-            <h3 className="font-semibold text-slate-800 mb-3">ECAPP & BERI Incentives Guide</h3>
+            <h3 className="font-semibold text-slate-800 mb-3">Colorado Incentives & Tax Credits Guide</h3>
             <p className="text-sm text-slate-600 mb-4">
-              Complete guide to Oregon ECAPP ($2M) and BERI ($12M) incentives including eligibility and application process.
+              Federal IRA 179D (up to $5/sqft) and 45L credits, plus utility rebates from Xcel Energy, Black Hills,
+              and municipal providers.
             </p>
             <Button
               variant="outline"
@@ -126,9 +130,9 @@ export default function ResourcesHub() {
               className="w-full bg-transparent"
               onClick={() =>
                 handleDownload(
-                  "ECAPP & BERI Incentives Guide",
-                  "Complete guide to Oregon ECAPP ($2M) and BERI ($12M) incentives including eligibility and application process",
-                  "ecapp-beri-incentives-guide.pdf",
+                  "Colorado Incentives & Tax Credits Guide",
+                  "Federal IRA 179D and 45L credits plus utility rebates from Xcel Energy, Black Hills, and municipal providers",
+                  "colorado-incentives-guide.pdf",
                 )
               }
             >
@@ -146,12 +150,12 @@ export default function ResourcesHub() {
                 <li className="flex items-center gap-2">
                   <ExternalLink className="w-4 h-4 text-slate-500" />
                   <a
-                    href="https://www.oregon.gov/energy/energy-oregon/Pages/Building-Performance-Standards.aspx"
+                    href="https://energyoffice.colorado.gov/building-performance-standards"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-slate-900 underline"
                   >
-                    Colorado Energy Office BPS Program Page
+                    Colorado Energy Office — BPS Program
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
@@ -168,12 +172,12 @@ export default function ResourcesHub() {
                 <li className="flex items-center gap-2">
                   <ExternalLink className="w-4 h-4 text-slate-500" />
                   <a
-                    href="https://olis.oregonlegislature.gov/liz/2021R1/Measures/Overview/HB3409"
+                    href="https://leg.colorado.gov/bills/hb21-1286"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-slate-900 underline"
                   >
-                    HB 21-1286 (2021) - Colorado BPS Law
+                    HB 21-1286 (2021) — Energy Performance for Buildings
                   </a>
                 </li>
               </ul>
@@ -183,34 +187,34 @@ export default function ResourcesHub() {
                 <li className="flex items-center gap-2">
                   <ExternalLink className="w-4 h-4 text-slate-500" />
                   <a
-                    href="https://secure.sos.state.or.us/oard/displayDivisionRules.action?selectedDivision=6874"
+                    href="https://cdphe.colorado.gov/air-pollution/building-performance-standard-rule"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-slate-900 underline"
                   >
-                    OAR 330-140 - BPS Administrative Rules
+                    CDPHE Regulation 28 (5 CCR 1001-32)
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <ExternalLink className="w-4 h-4 text-slate-500" />
                   <a
-                    href="https://www.oregon.gov/deq/Pages/index.aspx"
+                    href="https://co.beam-portal.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-slate-900 underline"
                   >
-                    Oregon Department of Environmental Quality
+                    BEAM Portal — Building Owner Reporting
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <ExternalLink className="w-4 h-4 text-slate-500" />
                   <a
-                    href="https://www.oregon.gov/energy"
+                    href="https://energyoffice.colorado.gov/bpc"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-slate-900 underline"
                   >
-                    Colorado Energy Office
+                    Building Performance Colorado
                   </a>
                 </li>
               </ul>

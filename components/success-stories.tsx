@@ -10,57 +10,57 @@ const successStories = [
     id: 1,
     buildingType: "Office Complex",
     size: "150,000 sq ft",
-    tier: "Tier 1",
-    location: "Seattle, WA",
-    challenge: "Building was 25% above EUI target with aging HVAC systems",
-    solution: "Implemented comprehensive EMP with HVAC optimization and lighting upgrades",
+    pathway: "Energy Efficiency",
+    location: "Denver, CO",
+    challenge: "Building was tracking above its Site EUI target with aging HVAC systems",
+    solution: "ASHRAE Level 2 audit, HVAC optimization and lighting upgrades aligned to the Energy Efficiency pathway",
     results: {
       energySavings: "32%",
       costSavings: "$45,000/year",
       incentiveReceived: "$300,000",
-      complianceStatus: "Early Compliance Achieved",
+      complianceStatus: "On Track for 2026 Interim Target",
     },
     testimonial:
-      "The early adopter incentive covered 80% of our upgrade costs. We're now saving $45K annually and fully compliant 2 years early.",
-    owner: "Pacific Northwest Properties",
+      "Federal IRA 179D deductions and Xcel rebates covered the majority of our upgrade costs. We're saving $45K annually and well ahead of the 2026 interim target.",
+    owner: "Front Range Properties",
     timeline: "Completed in 8 months",
   },
   {
     id: 2,
     buildingType: "Multifamily Residential",
-    size: "35,000 sq ft",
-    tier: "Tier 2",
-    location: "Spokane, WA",
-    challenge: "Limited budget for compliance with tight timeline",
-    solution: "Focused on low-cost EMP and O&M improvements with Anti-Displacement Agreement",
+    size: "75,000 sq ft",
+    pathway: "GHG Reduction",
+    location: "Boulder, CO",
+    challenge: "Limited budget for compliance with the Dec 31, 2025 audit and pathway-selection deadline approaching",
+    solution: "Selected the GHG Reduction pathway, prioritized electrification and low-cost operational improvements",
     results: {
       energySavings: "18%",
       costSavings: "$12,000/year",
       incentiveReceived: "$26,250",
-      complianceStatus: "On Track for 2027",
+      complianceStatus: "Pathway Filed • 2026 Interim On Track",
     },
     testimonial:
-      "The enhanced $0.75/sq ft incentive for multifamily made this financially viable. Our tenants benefit from lower utility costs too.",
-    owner: "Evergreen Housing Partners",
+      "Utility rebates plus federal 45L credits made the project financially viable, and our residents benefit from lower utility costs.",
+    owner: "Flatirons Housing Partners",
     timeline: "Completed in 6 months",
   },
   {
     id: 3,
     buildingType: "Retail Center",
     size: "85,000 sq ft",
-    tier: "Tier 1",
-    location: "Tacoma, WA",
-    challenge: "Complex mixed-use building with multiple tenants",
-    solution: "Coordinated tenant engagement with building-wide energy management strategy",
+    pathway: "Standard % Reduction",
+    location: "Colorado Springs, CO",
+    challenge: "Complex mixed-use building with multiple tenants and a 2021 baseline well above the assigned target",
+    solution: "Used the Standard % Reduction pathway (13% by 2026 / 29% by 2030) with coordinated tenant engagement",
     results: {
       energySavings: "28%",
       costSavings: "$38,000/year",
       incentiveReceived: "$170,000",
-      complianceStatus: "Compliant + Performance Bonus",
+      complianceStatus: "Compliant with 2026 Interim Target",
     },
     testimonial:
-      "Professional guidance was essential for navigating tenant coordination and maximizing available incentives.",
-    owner: "Puget Sound Retail Group",
+      "Professional guidance was essential for navigating tenant coordination and stacking IRA 179D with utility incentives.",
+    owner: "Pikes Peak Retail Group",
     timeline: "Completed in 10 months",
   },
 ]
@@ -70,9 +70,10 @@ export default function SuccessStories() {
     <section className="py-16 bg-slate-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-slate-800 mb-4">CBPS Success Stories</h2>
+          <h2 className="text-3xl font-bold text-slate-800 mb-4">Colorado BPS Success Stories</h2>
           <p className="text-lg text-slate-700 mb-6">
-            Real Washington building owners who achieved early compliance and maximized incentives
+            Colorado building owners who selected a compliance pathway, hit interim targets, and stacked
+            federal and utility incentives
           </p>
           <div className="flex justify-center gap-2 mb-8">
             <Badge variant="outline" className="bg-colorado-blue-50 text-colorado-blue-600">
@@ -91,7 +92,7 @@ export default function SuccessStories() {
             <Card key={story.id} className="bg-white border-2 hover:shadow-lg transition-all">
               <CardHeader>
                 <div className="flex items-center justify-between mb-3">
-                  <Badge variant={story.tier === "Tier 1" ? "default" : "secondary"}>{story.tier}</Badge>
+                  <Badge variant="default">{story.pathway}</Badge>
                   <div className="flex items-center gap-1 text-sm text-slate-600">
                     <Building className="w-4 h-4" />
                     {story.size}
@@ -152,8 +153,8 @@ export default function SuccessStories() {
           <Card className="max-w-2xl mx-auto p-8 bg-gradient-to-r from-colorado-gold-50 to-blue-50 border-2">
             <h3 className="text-xl font-bold text-slate-800 mb-4">Ready to Join These Success Stories?</h3>
             <p className="text-slate-700 mb-6">
-              Our compliance experts have helped dozens of Washington building owners achieve early compliance, maximize
-              incentives, and reduce long-term operating costs.
+              Our compliance experts have helped dozens of Colorado building owners select a pathway, hit interim
+              targets, and stack federal and utility incentives to offset upgrade costs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

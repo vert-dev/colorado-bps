@@ -158,7 +158,7 @@ const SchedulingModal = ({ isOpen, onClose }: SchedulingModalProps) => {
               value={formData.buildingAddress}
               onChange={(e) => handleInputChange("buildingAddress", e.target.value)}
               required
-              placeholder="123 Main St, Seattle, WA 98101"
+              placeholder="123 Main St, Denver, CO 80202"
             />
           </div>
 

@@ -10,25 +10,25 @@ import { BookCallButton } from "@/components/book-call-button"
 export const metadata: Metadata = {
   title: "About Vert Energy Group | Colorado BPS Compliance Experts | Inc 5000 Company",
   description:
-    "Vert Energy Group: 16 years of Colorado BPS compliance expertise. Inc 5000 company for 5 consecutive years. Energy Star Partner. VertPro platform manages 10,000+ properties nationwide. Oregon Verified Energy Auditor Network member.",
+    "Vert Energy Group: 16 years of building performance compliance expertise serving Colorado building owners. Inc 5000 company for 5 consecutive years. Energy Star Partner. VertPro platform manages 10,000+ properties nationwide.",
   keywords: [
     "Vert Energy Group",
     "Colorado BPS experts",
     "Inc 5000 company",
     "Energy Star Partner",
     "VertPro platform",
-    "Oregon Verified Energy Auditor",
-    "CBPS compliance services",
+    "HB 21-1286 compliance",
+    "Colorado BPS compliance services",
     "energy management compliance",
     "building performance standards",
     "commercial energy audits",
     "ASHRAE Level 2 audits",
-    "Oregon energy compliance",
+    "Colorado energy compliance",
   ],
   openGraph: {
     title: "About Vert Energy Group | Colorado BPS Experts",
     description:
-      "16 years of CBPS expertise. Inc 5000 company. Energy Star Partner. VertPro platform serves 10,000+ properties.",
+      "16 years of building performance compliance expertise. Inc 5000 company. Energy Star Partner. VertPro platform serves 10,000+ properties.",
     url: "https://co-bps.com/about",
     images: [
       {
@@ -288,8 +288,8 @@ export default function AboutPage() {
                 <div className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">WA CBPS Expertise</h4>
-                    <p className="text-gray-600">Deep understanding of Oregon's Building Performance Standard</p>
+                    <h4 className="font-semibold text-gray-900">Colorado BPS Expertise</h4>
+                    <p className="text-gray-600">Deep understanding of HB 21-1286 and CDPHE Regulation 28</p>
                   </div>
                 </div>
               </div>
@@ -335,13 +335,13 @@ export default function AboutPage() {
                 <div className="flex items-center mb-4">
                   <Building2 className="h-12 w-12 text-colorado-blue-500 mr-4" />
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900">WA State Verified Energy Auditor Network</h3>
-                    <p className="text-gray-600">Washington Department of Commerce</p>
+                    <h3 className="text-xl font-bold text-gray-900">ASHRAE Level 2 Energy Auditors</h3>
+                    <p className="text-gray-600">Qualified for Colorado BPS compliance work</p>
                   </div>
                 </div>
                 <p className="text-gray-600">
-                  Part of Oregon's official Verified Energy Auditor Network, qualified to perform ASHRAE Level
-                  2 Energy Audits for CBPS compliance.
+                  Our team performs ASHRAE Level 2 Energy Audits required for Colorado BPS pathway selection and
+                  compliance planning under CDPHE Regulation 28.
                 </p>
               </CardContent>
             </Card>

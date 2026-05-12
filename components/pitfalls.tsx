@@ -12,39 +12,39 @@ export default function Pitfalls() {
   const pitfalls = [
     {
       number: 1,
-      title: "Assuming Tier 2 has a 12-month rule",
+      title: "Skipping benchmarking while you plan",
       description:
-        "Tier 2 only requires EMP & O&M to be 'complete and being implemented' by July 1, 2027. The 12-month look-back applies to Tier 1 only.",
+        "Annual benchmarking is its own requirement. Missing the June 1 BEAM Portal submission triggers $500 / $2,000 penalties regardless of your performance pathway.",
     },
     {
       number: 2,
-      title: "Marketing a single EUIt target",
+      title: "Picking a pathway without a 2021 baseline check",
       description:
-        "Energy targets vary by activity mix, operating hours, climate zone, and building type. Always compute Form B first for accurate targets.",
+        "Targeted EUI, GHG Reduction, and Standard % Reduction each compare to a 2021 baseline. Lock and verify the baseline before choosing — the wrong pathway can lock you into a steeper reduction.",
     },
     {
       number: 3,
-      title: "Waiting on the compliance portal",
+      title: "Waiting until December 2025 to file the audit",
       description:
-        "Tier 2 owners can start filing July 1, 2025. Digital signatures are required to submit - don't wait until the deadline.",
+        "ASHRAE Level 2 audits, compliance plan, and pathway selection are all due December 31, 2025. A 30-day audit can't be started on December 1 — start now.",
     },
     {
       number: 4,
-      title: "Skipping the Energy Manager role",
+      title: "Skipping the BEAM Portal Web Services connection",
       description:
-        "The Qualified Energy Manager (QEM) is explicitly required on forms and expected by Commerce for both tiers.",
+        "ENERGY STAR Portfolio Manager must be connected to Colorado's BEAM Portal via Web Services. Without the connection, submitted data may not count.",
     },
     {
       number: 5,
-      title: "Missing conditional compliance deadlines",
+      title: "Counting on Oregon ECAPP / BERI grants",
       description:
-        "Tier 1 conditional applications must be submitted ≥180 days before compliance date. Plan ahead for audit and investment criteria pathways.",
+        "Those are Oregon-only programs. Colorado's incentive stack is federal IRA 179D / 45L plus utility rebates from Xcel Energy, Black Hills Energy, and municipal providers.",
     },
     {
       number: 6,
-      title: "Ignoring Seattle BEPS overlay requirements",
+      title: "Ignoring local ordinances on top of state BPS",
       description:
-        "Seattle buildings must comply with both WA CBPS AND Seattle's Building Emissions Performance Standard (BEPS) - separate laws with different timelines.",
+        "Denver and other municipalities have local energize / GHG ordinances that layer on top of HB 21-1286. Confirm your building isn't subject to additional local deadlines.",
     },
   ]
 
@@ -56,59 +56,46 @@ export default function Pitfalls() {
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-3">
                 <AlertTriangle className="w-6 h-6 text-red-600" />
-                <h2 className="text-2xl font-bold">The 6 Common Pitfalls</h2>
+                <h2 className="text-2xl font-bold">The 6 Common Colorado BPS Pitfalls</h2>
               </div>
               <p className="text-slate-600 mb-4">
                 Avoid these costly mistakes that cause most compliance issues and penalties
               </p>
               <div className="text-xs text-slate-500 mb-4">
-                Based on RCW 19.27A.210 requirements and WAC 194-50 implementation rules
+                Based on HB 21-1286 and CDPHE Regulation 28 (5 CCR 1001-32)
               </div>
             </div>
 
             <div className="bg-white p-4 rounded-lg border shadow-sm">
               <div className="flex items-center space-x-2 mb-3">
                 <TrendingUp className="w-4 h-4 text-red-600" />
-                <h3 className="font-semibold text-sm">Penalty Comparison by Tier</h3>
+                <h3 className="font-semibold text-sm">Penalty Snapshot</h3>
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-xs">
-                  <span>Tier 1 Base Fine</span>
-                  <span className="font-medium text-red-600">$5,000</span>
-                </div>
-                <div className="w-full bg-slate-200 rounded-full h-2">
-                  <div className="bg-red-500 h-2 rounded-full w-1/6"></div>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span>+ $1.00/sq ft annually</span>
-                  <span className="font-medium text-red-600">$273.97/day</span>
-                </div>
-                <div className="w-full bg-slate-200 rounded-full h-2">
-                  <div className="bg-red-600 h-2 rounded-full w-full"></div>
-                </div>
-                <div className="flex justify-between text-xs">
-                  <span>Tier 2 Flat Fee</span>
-                  <span className="font-medium text-orange-600">$0.30/sq ft</span>
+                  <span>First benchmarking miss</span>
+                  <span className="font-medium text-orange-600">$500</span>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-2">
                   <div className="bg-orange-500 h-2 rounded-full w-1/5"></div>
                 </div>
-                <p className="text-xs text-slate-500 mt-2">*Per RCW 19.27A.230, adjusted annually for inflation</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <div className="flex items-start gap-3">
-              <div className="w-5 h-5 bg-blue-600 rounded text-white text-xs flex items-center justify-center font-bold mt-0.5">
-                SEA
-              </div>
-              <div>
-                <h3 className="font-semibold text-blue-900 mb-1">Seattle Buildings: Dual Compliance Required</h3>
-                <p className="text-sm text-blue-800">
-                  Seattle properties must comply with <strong>both</strong> WA CBPS <strong>and</strong> Seattle's
-                  Building Emissions Performance Standard (BEPS). BEPS has separate GHG reporting requirements starting
-                  2027 and performance targets beginning 2031-2033.
+                <div className="flex justify-between text-xs">
+                  <span>Subsequent miss</span>
+                  <span className="font-medium text-red-600">$2,000</span>
+                </div>
+                <div className="w-full bg-slate-200 rounded-full h-2">
+                  <div className="bg-red-500 h-2 rounded-full w-2/3"></div>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span>Performance penalties</span>
+                  <span className="font-medium text-red-600">Monthly</span>
+                </div>
+                <div className="w-full bg-slate-200 rounded-full h-2">
+                  <div className="bg-red-600 h-2 rounded-full w-full"></div>
+                </div>
+                <p className="text-xs text-slate-500 mt-2">
+                  *Performance penalties begin June 1, 2027 (interim) and June 1, 2031 (final). Annual benchmarking fee:
+                  $100/building.
                 </p>
               </div>
             </div>

@@ -20,11 +20,11 @@ export default function ResourcesTemplates() {
               <CardContent className="space-y-4">
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <FileText className="w-4 h-4 mr-2" />
-                  EMP Template (Doc)
+                  Compliance Plan Template (Doc)
                 </Button>
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <FileText className="w-4 h-4 mr-2" />
-                  O&M Checklist (PDF)
+                  Pathway Selection Worksheet (PDF)
                 </Button>
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <Mail className="w-4 h-4 mr-2" />
@@ -43,19 +43,19 @@ export default function ResourcesTemplates() {
               <CardContent className="space-y-4">
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Washington Dept. of Commerce CBPS hub
+                  Colorado Energy Office BPS hub
                 </Button>
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Official FAQs
+                  CDPHE Regulation 28
                 </Button>
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  EUIt tables
+                  BEAM Portal
                 </Button>
                 <Button variant="outline" size="sm" className="w-full justify-start bg-transparent">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  Office hours schedule
+                  HB 21-1286 text
                 </Button>
               </CardContent>
             </Card>
@@ -63,7 +63,7 @@ export default function ResourcesTemplates() {
 
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              We are not affiliated with the Oregon Dept. of Commerce; links are provided for convenience.
+              We are not affiliated with the Colorado Energy Office or CDPHE; links are provided for convenience.
             </p>
           </div>
         </div>

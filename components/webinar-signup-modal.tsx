@@ -69,7 +69,7 @@ export default function WebinarSignupModal({ isOpen, onClose }: WebinarSignupMod
       <DialogContent className="max-w-md">
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-slate-800">
-            Register for Tier 2 Requirements Webinar
+            Register for Colorado BPS Requirements Webinar
           </DialogTitle>
         </DialogHeader>
 
@@ -135,7 +135,7 @@ export default function WebinarSignupModal({ isOpen, onClose }: WebinarSignupMod
               id="questions"
               value={formData.questions}
               onChange={(e) => setFormData({ ...formData, questions: e.target.value })}
-              placeholder="Any specific questions about Tier 2 compliance?"
+              placeholder="Any specific questions about Colorado BPS compliance or pathway selection?"
               rows={3}
             />
           </div>
