@@ -4,6 +4,8 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 import AnalyticsTracker from "@/components/analytics-tracker";
+import LinkedInInsight from "@/components/linkedin-insight";
+import { GOOGLE_ADS_TAG_SCRIPT } from "@/lib/ad-account-tags";
 import CBPSChatbot from "@/components/cbps-chatbot"; // Added import for CBPSChatbot
 import { Suspense } from "react";
 
@@ -129,6 +131,8 @@ export default function RootLayout({
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-T6DGH55P');`,
           }}
         />
+        {/* Google Ads tag AW-822042382 (gtag.js), once per page, production hosts only (lib/ad-account-tags.ts). Shares the dataLayer GTM filled above. */}
+        <script dangerouslySetInnerHTML={{ __html: GOOGLE_ADS_TAG_SCRIPT }} />
         <style>{`
 html {
   font-family: ${GeistSans.style.fontFamily};
@@ -161,6 +165,8 @@ html {
         </noscript>
         <Suspense fallback={<div>Loading...</div>}>
           <AnalyticsTracker />
+          {/* LinkedIn Insight Tag, partner 6743762, production hosts only (lib/ad-account-tags.ts). */}
+          <LinkedInInsight />
           {children}
           <CBPSChatbot /> {/* Added CBPS chatbot widget to all pages */}
         </Suspense>
