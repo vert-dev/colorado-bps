@@ -6,6 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
+    "check:hero-deadline": "node scripts/check-hero-deadline.cjs",
     "start": "next start"
   },
   "dependencies": {

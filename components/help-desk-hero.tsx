@@ -38,8 +38,10 @@ export default function HelpDeskHero() {
               <p className="text-xl text-colorado-blue-50 leading-relaxed mb-8">
                 Resources and guidance for building owners to comply with{" "}
                 <strong className="text-yellow-300">Colorado Building Performance Standard (HB 21-1286)</strong>.
-                Critical deadline: <strong className="text-yellow-300">December 31, 2025</strong> to complete your
-                energy audit and select your compliance pathway. Choose from 3 pathways to meet your 2026 interim
+                {/* Source: Colorado Energy Office, Building Performance Colorado, Key Dates and Deadlines:
+                    "November 1, annually: Benchmarking report and fee payment due." (energyoffice.colorado.gov/bpc) */}
+                Critical deadline: <strong className="text-yellow-300">November 1, every year</strong> for your annual
+                benchmarking report and fee payment. Choose from 3 pathways to meet your 2026 interim
                 (7% reduction) and 2030 final (20% reduction) targets.
               </p>
 
