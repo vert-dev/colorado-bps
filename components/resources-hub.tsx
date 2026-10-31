@@ -95,7 +95,7 @@ export default function ResourcesHub() {
             <h3 className="font-semibold text-slate-800 mb-3">Audit + Pathway Selection Checklist</h3>
             <p className="text-sm text-slate-600 mb-4">
               Step-by-step checklist for benchmarking, ASHRAE Level 2 audits, choosing the right pathway, and filing
-              your compliance plan by December 31, 2025.
+              your compliance plan.
             </p>
             <Button
               variant="outline"
@@ -104,7 +104,7 @@ export default function ResourcesHub() {
               onClick={() =>
                 handleDownload(
                   "Audit + Pathway Selection Checklist",
-                  "Step-by-step checklist for benchmarking, ASHRAE Level 2 audits, choosing the right pathway, and filing your compliance plan by December 31, 2025",
+                  "Step-by-step checklist for benchmarking, ASHRAE Level 2 audits, choosing the right pathway, and filing your compliance plan",
                   "audit-pathway-checklist.pdf",
                 )
               }

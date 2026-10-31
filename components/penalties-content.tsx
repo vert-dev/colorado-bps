@@ -56,7 +56,7 @@ export default function PenaltiesContent() {
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="bg-white p-4 rounded-lg border border-orange-200">
-              <h4 className="font-semibold text-orange-800 mb-2">Annual Benchmarking Deadline: August 1</h4>
+              <h4 className="font-semibold text-orange-800 mb-2">Annual Benchmarking Deadline: November 1</h4>
               <ul className="space-y-2 text-sm">
                 <li className="flex justify-between">
                   <span>Annual Filing Fee:</span>
@@ -72,7 +72,7 @@ export default function PenaltiesContent() {
                 </li>
                 <li className="flex justify-between">
                   <span>Deadline:</span>
-                  <span className="font-bold text-orange-600">August 1, annually</span>
+                  <span className="font-bold text-orange-600">November 1, annually</span>
                 </li>
               </ul>
             </div>
@@ -93,7 +93,7 @@ export default function PenaltiesContent() {
                   <span>Pay $100 annual fee per building</span>
                 </p>
                 <p className="text-xs text-orange-600 mt-2 font-semibold">
-                  ⚠️ Failure to benchmark by August 1 triggers penalties
+                  ⚠️ Late reports and fees trigger penalties
                 </p>
               </div>
             </div>
@@ -227,13 +227,13 @@ export default function PenaltiesContent() {
         <CardHeader>
           <CardTitle className="flex items-center text-colorado-blue-800">
             <Shield className="w-6 h-6 mr-3" />
-            Choose Your Compliance Pathway Before December 31, 2025
+            Choose Your Compliance Pathway
           </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="mb-4">
             <p className="text-sm text-slate-600 mb-3">
-              <strong>Critical Decision Point:</strong> By December 31, 2025, you must complete an energy audit and select one of three compliance pathways. Your pathway choice determines how penalties are calculated.
+              <strong>Critical Decision Point:</strong> Select one of three compliance pathways. Your pathway choice determines how penalties are calculated.
             </p>
           </div>
 
@@ -271,7 +271,7 @@ export default function PenaltiesContent() {
 
           <div className="mt-4 p-3 bg-red-50 rounded-lg border border-red-200">
             <p className="text-sm text-red-700">
-              <strong>Missing the December 31, 2025 audit/pathway deadline:</strong> May result in additional penalties or forced pathway assignment. Complete your audit in early 2025.
+              <strong>Choosing a pathway:</strong> Your choice decides how your performance is measured and how penalties are calculated. Complete your audit early.
             </p>
           </div>
         </CardContent>

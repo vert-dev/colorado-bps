@@ -35,7 +35,7 @@ export default function WhatIsColoradoBPS() {
                 <div>
                   <p className="font-semibold text-slate-800">Key Deadlines</p>
                   <p className="text-slate-700">
-                    <strong>Dec 31, 2025:</strong> Energy audit + compliance plan + pathway selection<br />
+                    <strong>Nov 1, annually:</strong> Benchmarking report + fee<br />
                     <strong>Dec 31, 2026:</strong> Meet interim targets (7% reduction)<br />
                     <strong>Dec 31, 2030:</strong> Meet final targets (20% reduction)
                   </p>
@@ -47,7 +47,7 @@ export default function WhatIsColoradoBPS() {
                   <p className="font-semibold text-slate-800">Three Compliance Pathways</p>
                   <p className="text-slate-700">
                     Choose from <strong>Energy Efficiency</strong> (reduce Site EUI), <strong>GHG Reduction</strong> (reduce emissions),
-                    or <strong>Standard % Reduction</strong> (fixed 13%/29% cuts). Select the best fit for your building by Dec 2025.
+                    or <strong>Standard % Reduction</strong> (fixed 13%/29% cuts). Select the best fit for your building.
                   </p>
                 </div>
               </div>
@@ -92,11 +92,7 @@ export default function WhatIsColoradoBPS() {
               <div className="text-sm text-slate-700 space-y-2">
                 <div className="flex justify-between">
                   <span>Annual Benchmarking</span>
-                  <span className="font-medium text-colorado-blue-700">August 1 deadline</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Audit + Plan + Pathway</span>
-                  <span className="font-medium text-colorado-blue-700">Dec 31, 2025</span>
+                  <span className="font-medium text-colorado-blue-700">November 1 deadline</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Interim Target (7%)</span>
@@ -124,7 +120,7 @@ export default function WhatIsColoradoBPS() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-800">Three Pathways</h3>
-                  <p className="text-sm text-slate-600">Choose by Dec 31, 2025</p>
+                  <p className="text-sm text-slate-600">Choose the best fit for your building</p>
                 </div>
               </div>
               <div className="text-sm text-slate-700 space-y-2">
@@ -150,7 +146,7 @@ export default function WhatIsColoradoBPS() {
                   <li>• Use Energy Star Portfolio Manager</li>
                   <li>• Connect to Colorado's BEAM Portal</li>
                   <li>• Submit annual report + $100 fee</li>
-                  <li>• August 1 deadline each year</li>
+                  <li>• November 1 deadline each year</li>
                 </ul>
                 <p className="text-xs text-colorado-blue-600 mt-2 font-semibold">
                   Benchmarking enforcement began January 1, 2024

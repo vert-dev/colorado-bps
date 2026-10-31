@@ -50,7 +50,7 @@ const complianceSteps: ComplianceStep[] = [
     description: "Submit energy usage data via Portfolio Manager to BEAM Portal and pay $100 annual fee",
     icon: <FileText className="w-6 h-6 text-orange-600" />,
     phase: "annual",
-    timeframe: "August 1 each year",
+    timeframe: "November 1 each year",
     completed: false,
     urgent: true,
   },
@@ -60,9 +60,8 @@ const complianceSteps: ComplianceStep[] = [
     description: "Hire qualified professional to conduct comprehensive energy audit of your building",
     icon: <CheckCircle className="w-6 h-6 text-colorado-gold-600" />,
     phase: "preparation",
-    timeframe: "By December 31, 2025",
+    timeframe: "Ahead of the interim target",
     completed: false,
-    urgent: true,
   },
   {
     id: "pathway-selection",
@@ -70,9 +69,8 @@ const complianceSteps: ComplianceStep[] = [
     description: "Choose one of three pathways: Energy Efficiency, GHG Reduction, or Standard % Reduction",
     icon: <Target className="w-6 h-6 text-purple-600" />,
     phase: "preparation",
-    timeframe: "By December 31, 2025",
+    timeframe: "Ahead of the interim target",
     completed: false,
-    urgent: true,
   },
   {
     id: "compliance-plan",
@@ -80,9 +78,8 @@ const complianceSteps: ComplianceStep[] = [
     description: "Submit formal compliance plan to Colorado Energy Office documenting chosen pathway and strategy",
     icon: <FileText className="w-6 h-6 text-amber-600" />,
     phase: "preparation",
-    timeframe: "By December 31, 2025",
+    timeframe: "Ahead of the interim target",
     completed: false,
-    urgent: true,
   },
   {
     id: "interim-target",
@@ -186,7 +183,7 @@ export default function InteractiveComplianceChecklist() {
               size="sm"
               className="bg-red-600 hover:bg-red-700"
             >
-              2025 Prep
+              Preparation
             </Button>
             <Button
               variant={selectedPhase === "interim" ? "default" : "outline"}
@@ -269,7 +266,7 @@ export default function InteractiveComplianceChecklist() {
                         {step.phase === "annual"
                           ? "Annual"
                           : step.phase === "preparation"
-                            ? "2025 Prep"
+                            ? "Preparation"
                             : step.phase === "interim"
                               ? "2026 Interim"
                               : "2030 Final"}
@@ -293,8 +290,8 @@ export default function InteractiveComplianceChecklist() {
             <AlertTriangle className="h-4 w-4" />
             <AlertTitle>Next Steps</AlertTitle>
             <AlertDescription>
-              Focus on completing the December 31, 2025 preparation items (energy audit, pathway selection, compliance
-              plan) to avoid missing the critical first deadline. Need help getting started? Our compliance experts can
+              Focus on the preparation items (energy audit, pathway selection, compliance plan) ahead of the December 31,
+              2026 interim target. Need help getting started? Our compliance experts can
               guide you through each step.
             </AlertDescription>
           </Alert>

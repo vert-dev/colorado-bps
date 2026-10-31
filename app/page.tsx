@@ -12,15 +12,15 @@ import PenaltiesContent from "@/components/penalties-content"
 import EarlyAdopterIncentives from "@/components/early-adopter-incentives"
 
 export const metadata: Metadata = {
-  title: "Colorado BPS Help Desk | Building Performance Standard Compliance December 2025",
+  title: "Colorado BPS Help Desk | Building Performance Standard Compliance",
   description:
-    "Expert Colorado Building Performance Standard (HB 21-1286) compliance services for buildings ≥50,000 sq ft. Critical December 31, 2025 deadline for energy audit + pathway selection. 3 compliance pathways.",
+    "Expert Colorado Building Performance Standard (HB 21-1286) compliance services for buildings ≥50,000 sq ft. Annual benchmarking report and fee due November 1. 3 compliance pathways.",
   keywords: [
     "Colorado BPS",
     "Building Performance Standard Colorado",
     "HB 21-1286",
     "HB21-1286",
-    "December 2025 deadline",
+    "November 1 benchmarking deadline",
     "compliance pathway",
     "energy audit Colorado",
     "Colorado Energy Office",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Colorado BPS Help Desk | Building Performance Standard Compliance",
     description:
-      "Expert Colorado BPS (HB 21-1286) compliance help. December 31, 2025 critical deadline for energy audit + pathway selection. Buildings ≥50k sqft. 3 compliance pathways available.",
+      "Expert Colorado BPS (HB 21-1286) compliance help. Annual benchmarking report and fee due November 1. Buildings ≥50k sqft. 3 compliance pathways available.",
     url: "https://co-bps.com",
     images: [
       {

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title:
     "Colorado BPS Compliance Help | Building Performance Standard Expert Services",
   description:
-    "Expert Colorado Building Performance Standard (HB 21-1286) compliance services for buildings ≥50,000 sq ft. 3 compliance pathways, energy audits, December 2025 deadline. Serving Colorado statewide.",
+    "Expert Colorado Building Performance Standard (HB 21-1286) compliance services for buildings ≥50,000 sq ft. 3 compliance pathways, energy audits, annual November 1 benchmarking deadline. Serving Colorado statewide.",
   keywords: [
     "Colorado BPS",
     "Building Performance Standard Colorado",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "HB21-1286",
     "Colorado Energy Office",
     "BEAM Portal",
-    "December 2025 deadline",
+    "November 1 benchmarking deadline",
     "building compliance Colorado",
     "BPS requirements",
     "energy benchmarking Colorado",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     title:
       "Colorado BPS Compliance Help | Building Performance Standard",
     description:
-      "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. December 2025 audit/pathway deadline. 3 compliance pathways for buildings ≥50k sq ft.",
+      "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. Annual November 1 benchmarking deadline. 3 compliance pathways for buildings ≥50k sq ft.",
     images: [
       {
         url: "/images/colorado-bps-logo.png",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title:
       "Colorado BPS Compliance Help | Building Performance Standard",
     description:
-      "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. December 2025 audit/pathway deadline. Buildings ≥50k sq ft.",
+      "Expert Colorado Building Performance Standard (HB 21-1286) compliance services. Annual November 1 benchmarking deadline. Buildings ≥50k sq ft.",
     images: ["/images/colorado-bps-logo.png"],
   },
   alternates: {

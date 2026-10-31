@@ -4,7 +4,7 @@ import PricingPageClient from "./PricingPageClient"
 export const metadata: Metadata = {
   title: "Colorado BPS Compliance Packages | Energy Audits & Pathway Selection",
   description:
-    "Colorado BPS (HB 21-1286) compliance packages for buildings ≥50,000 sq ft. Energy audits, pathway selection, compliance planning. December 31, 2025 critical deadline. Expert guidance for 3 compliance pathways.",
+    "Colorado BPS (HB 21-1286) compliance packages for buildings ≥50,000 sq ft. Energy audits, pathway selection, compliance planning. Annual benchmarking due November 1. Expert guidance for 3 compliance pathways.",
   keywords: [
     "Colorado BPS pricing",
     "Colorado BPS compliance packages",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     "energy audit cost Colorado",
     "pathway selection",
     "Colorado BPS flat fee pricing",
-    "December 2025 deadline",
+    "November 1 benchmarking deadline",
     "commercial building compliance cost",
     "December 2026 interim target",
     "Colorado Energy Office compliance",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Colorado BPS Compliance Packages | Energy Audits & Pathway Selection",
     description:
-      "Colorado BPS (HB 21-1286) compliance packages for buildings ≥50k sq ft. Energy audits, 3 pathway options. December 31, 2025 critical deadline.",
+      "Colorado BPS (HB 21-1286) compliance packages for buildings ≥50k sq ft. Energy audits, 3 pathway options. Annual benchmarking due November 1.",
     url: "https://co-bps.com/pricing",
     images: [
       {

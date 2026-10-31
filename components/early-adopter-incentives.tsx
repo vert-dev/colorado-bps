@@ -218,7 +218,7 @@ export default function EarlyAdopterIncentives() {
                   <div className="text-3xl font-bold text-colorado-gold-600 mb-2">Step 1</div>
                   <h4 className="font-semibold text-colorado-blue-800 mb-2">Energy Audit</h4>
                   <p className="text-sm text-gray-700">
-                    Complete energy audit by Dec 31, 2025 to identify efficiency opportunities and estimate IRA 179D eligibility
+                    Complete an energy audit to identify efficiency opportunities and estimate IRA 179D eligibility
                   </p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-colorado-blue-200">
@@ -314,7 +314,7 @@ export default function EarlyAdopterIncentives() {
                 </p>
                 <p>
                   <strong>Timeline:</strong> Incentive application processes take 2-6 months. Plan applications well in
-                  advance of December 2025 audit deadline.
+                  advance of your audit and project start.
                 </p>
               </CardContent>
             </Card>

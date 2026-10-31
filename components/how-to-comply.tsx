@@ -40,7 +40,7 @@ export default function HowToComply() {
             </div>
             <h3 className="font-semibold text-slate-800 mb-3">Complete Energy Audit</h3>
             <p className="text-sm text-slate-600">
-              Hire qualified auditor to assess your building and identify energy/emissions reduction opportunities by Dec 31, 2025.
+              Hire qualified auditor to assess your building and identify energy/emissions reduction opportunities.
             </p>
           </Card>
 
@@ -54,7 +54,7 @@ export default function HowToComply() {
             </div>
             <h3 className="font-semibold text-slate-800 mb-3">Select Pathway</h3>
             <p className="text-sm text-slate-600">
-              Choose Energy Efficiency, GHG Reduction, or Standard % Reduction pathway by Dec 31, 2025.
+              Choose Energy Efficiency, GHG Reduction, or Standard % Reduction pathway.
             </p>
           </Card>
 
@@ -178,7 +178,7 @@ export default function HowToComply() {
                 <h4 className="font-semibold text-slate-800 mb-2">Connect to BEAM Portal & Submit Annual Reports</h4>
                 <p className="text-sm text-slate-700">
                   Connect Portfolio Manager to Colorado's BEAM Portal using Web Services. Submit annual benchmarking
-                  report + $100 fee by August 1 each year. BEAM Portal provides customized compliance reports showing
+                  report + $100 fee by November 1 each year. BEAM Portal provides customized compliance reports showing
                   your current performance against targets.
                 </p>
               </div>
@@ -189,11 +189,11 @@ export default function HowToComply() {
                 3
               </div>
               <div>
-                <h4 className="font-semibold text-slate-800 mb-2">Complete Energy Audit by December 31, 2025</h4>
+                <h4 className="font-semibold text-slate-800 mb-2">Complete an Energy Audit</h4>
                 <p className="text-sm text-slate-700">
                   Hire qualified energy auditor to perform comprehensive building assessment. Audit identifies specific
-                  measures to achieve compliance, cost estimates, and payback periods. This audit is mandatory and must
-                  be submitted to Colorado Energy Office by Dec 31, 2025.
+                  measures to achieve compliance, cost estimates, and payback periods. The audit shows where to start
+                  and which pathway fits your building.
                 </p>
               </div>
             </div>
@@ -203,7 +203,7 @@ export default function HowToComply() {
                 4
               </div>
               <div>
-                <h4 className="font-semibold text-slate-800 mb-2">Select Compliance Pathway by December 31, 2025</h4>
+                <h4 className="font-semibold text-slate-800 mb-2">Select Your Compliance Pathway</h4>
                 <p className="text-sm text-slate-700 mb-2">
                   Based on audit findings, choose the pathway that best aligns with your building's capabilities:
                 </p>
@@ -250,7 +250,7 @@ export default function HowToComply() {
               <div>
                 <h4 className="font-semibold text-slate-800 mb-2">Ongoing Benchmarking & Compliance Reporting</h4>
                 <p className="text-sm text-slate-700">
-                  Continue annual benchmarking (August 1 deadline) and submit compliance documentation showing you maintain
+                  Continue annual benchmarking (November 1 deadline) and submit compliance documentation showing you maintain
                   20% reduction through 2050. Pathway selection can be changed in future compliance cycles if needed.
                 </p>
               </div>
@@ -263,13 +263,13 @@ export default function HowToComply() {
           <h3 className="font-semibold text-colorado-blue-800 mb-3 text-lg">⏰ Recommended Timeline</h3>
           <div className="grid md:grid-cols-3 gap-4 text-sm">
             <div>
-              <p className="font-semibold text-colorado-blue-700 mb-1">Now - December 2025:</p>
+              <p className="font-semibold text-colorado-blue-700 mb-1">Now:</p>
               <p className="text-colorado-blue-600">
-                Complete energy audit, develop compliance plan, select pathway, apply for IRA tax credits. This is CRITICAL—deadline is December 31, 2025.
+                Complete energy audit, develop compliance plan, select pathway, apply for IRA tax credits. Start early: audits and incentive applications take months.
               </p>
             </div>
             <div>
-              <p className="font-semibold text-colorado-blue-700 mb-1">2025-2026:</p>
+              <p className="font-semibold text-colorado-blue-700 mb-1">Through 2026:</p>
               <p className="text-colorado-blue-600">
                 Execute Phase 1 improvements to achieve 7% interim target by Dec 31, 2026. Track progress monthly to avoid June 2027 penalties.
               </p>
