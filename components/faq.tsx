@@ -6,22 +6,22 @@ export default function FAQ() {
     {
       question: "What is Colorado BPS and when does it take effect?",
       answer:
-        "Colorado Building Performance Standard (BPS) is a state law (HB 21-1286, passed in 2021) requiring buildings ≥50,000 sq ft to benchmark energy use annually and meet performance targets through one of three compliance pathways. Benchmarking enforcement began January 1, 2024. Critical deadline: December 31, 2025 for energy audit + compliance plan + pathway selection.",
+        "Colorado Building Performance Standard (BPS) is a state law (HB 21-1286, passed in 2021) requiring buildings ≥50,000 sq ft to benchmark energy use annually and meet performance targets through one of three compliance pathways. Benchmarking enforcement began January 1, 2024. Annual benchmarking report and fee payment are due November 1 each year; the reporting period opens July 1.",
     },
     {
       question: "Which buildings are covered?",
       answer:
-        "All buildings ≥50,000 sq ft are covered, regardless of type—commercial, institutional, residential (multifamily), government buildings, etc. There is a single threshold with no tier structure. Buildings must benchmark annually (August 1 deadline) and meet performance targets by December 31, 2026 (interim) and December 31, 2030 (final).",
+        "All buildings ≥50,000 sq ft are covered, regardless of type—commercial, institutional, residential (multifamily), government buildings, etc. There is a single threshold with no tier structure. Buildings must benchmark annually (November 1 deadline) and meet performance targets by December 31, 2026 (interim) and December 31, 2030 (final).",
     },
     {
       question: "What are the three compliance pathways?",
       answer:
-        "Colorado offers three pathways: (1) Energy Efficiency - reduce Site EUI by 7% (2026) and 20% (2030); (2) GHG Reduction - reduce greenhouse gas emissions by 7% (2026) and 20% (2030); (3) Standard % Reduction - fixed 13% (interim) and 29% (final) reductions, available only if 2021 baseline EUI is 29%+ above target. You must select a pathway by December 31, 2025, but can change it in future cycles.",
+        "Colorado offers three pathways: (1) Energy Efficiency - reduce Site EUI by 7% (2026) and 20% (2030); (2) GHG Reduction - reduce greenhouse gas emissions by 7% (2026) and 20% (2030); (3) Standard % Reduction - fixed 13% (interim) and 29% (final) reductions, available only if 2021 baseline EUI is 29%+ above target. You can change your compliance pathway without additional documentation until November 1, 2028.",
     },
     {
       question: "How do I benchmark my building?",
       answer:
-        "Use EPA's ENERGY STAR Portfolio Manager to track energy use. Input 12 months of utility data (electricity, natural gas, etc.) to calculate your building's Site EUI (kBtu/sq ft/year). Connect Portfolio Manager to Colorado's BEAM Portal via Web Services, then submit annual benchmarking report + $100 fee by August 1 each year. Benchmarking is required regardless of which compliance pathway you choose.",
+        "Use EPA's ENERGY STAR Portfolio Manager to track energy use. Input 12 months of utility data (electricity, natural gas, etc.) to calculate your building's Site EUI (kBtu/sq ft/year). Connect Portfolio Manager to Colorado's BEAM Portal via Web Services, then submit annual benchmarking report + $100 fee by November 1 each year. Benchmarking is required regardless of which compliance pathway you choose.",
     },
     {
       question: "What is the 2021 baseline and why does it matter?",
@@ -41,7 +41,7 @@ export default function FAQ() {
     {
       question: "How long does it take to achieve compliance?",
       answer:
-        "Plan 18-24 months minimum. Energy audits take 3-6 months. Applying for federal IRA tax credits takes 2-4 months. Capital improvement projects (HVAC, envelope, controls) take 6-18 months. After improvements, you need 12 months of utility data to verify you've met targets. Starting now for the December 2025 audit deadline is critical—delayed starts lead to rushed decisions and higher costs.",
+        "Plan 18-24 months minimum. Energy audits take 3-6 months. Applying for federal IRA tax credits takes 2-4 months. Capital improvement projects (HVAC, envelope, controls) take 6-18 months. After improvements, you need 12 months of utility data to verify you've met targets. Starting early is critical—delayed starts lead to rushed decisions and higher costs.",
     },
     {
       question: "Do I need to hire an engineer or energy auditor?",

@@ -31,7 +31,7 @@ const successStories = [
     size: "75,000 sq ft",
     pathway: "GHG Reduction",
     location: "Boulder, CO",
-    challenge: "Limited budget for compliance with the Dec 31, 2025 audit and pathway-selection deadline approaching",
+    challenge: "Limited budget for the audit and pathway selection ahead of the interim target",
     solution: "Selected the GHG Reduction pathway, prioritized electrification and low-cost operational improvements",
     results: {
       energySavings: "18%",

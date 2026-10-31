@@ -42,7 +42,7 @@ export default function Requirements() {
                         </td>
                       </tr>
                       <tr className="border-b bg-slate-50">
-                        <td className="p-4 font-medium">ASHRAE Level 2 Energy Audit (by Dec 31, 2025)</td>
+                        <td className="p-4 font-medium">ASHRAE Level 2 Energy Audit</td>
                         <td className="text-center p-4">
                           <Check className="w-5 h-5 text-colorado-blue-500 mx-auto" />
                         </td>
@@ -108,7 +108,7 @@ export default function Requirements() {
                 <ul className="space-y-3">
                   <li className="flex items-start space-x-3">
                     <span className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-sm">Benchmark in ENERGY STAR Portfolio Manager and submit to BEAM Portal each June 1</span>
+                    <span className="text-sm">Benchmark in ENERGY STAR Portfolio Manager and submit to BEAM Portal each November 1</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></span>
@@ -116,7 +116,7 @@ export default function Requirements() {
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="text-sm">File a compliance plan and select a pathway by Dec 31, 2025</span>
+                    <span className="text-sm">File a compliance plan and select a pathway</span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <span className="w-2 h-2 bg-slate-600 rounded-full mt-2 flex-shrink-0"></span>

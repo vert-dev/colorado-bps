@@ -43,8 +43,8 @@ export default function PricingPageClient() {
             <span className="text-colorado-blue-500">For Colorado BPS (HB 21-1286)</span>
           </h1>
           <p className="text-xl text-slate-600 mb-6 max-w-3xl mx-auto">
-            Colorado's Building Performance Standard applies to all buildings ≥50,000 sq ft. Your energy audit,
-            compliance plan, and pathway selection are due <strong>December 31, 2025</strong>. Interim performance
+            Colorado's Building Performance Standard applies to all buildings ≥50,000 sq ft. Annual
+            benchmarking is due <strong>November 1</strong> every year. Interim performance
             targets are due <strong>December 31, 2026</strong> and final targets <strong>December 31, 2030</strong>.
             We stack federal IRA credits and utility rebates to offset upgrade costs.
           </p>
@@ -58,7 +58,7 @@ export default function PricingPageClient() {
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Foundation Package — Audit + Plan + Pathway Selection
             </h2>
-            <p className="text-slate-600">Required for every covered building before December 31, 2025</p>
+            <p className="text-slate-600">A starting point for every covered building</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -94,7 +94,7 @@ export default function PricingPageClient() {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-colorado-blue-500" />
-                    <span>CDPHE filing by December 31, 2025</span>
+                    <span>CDPHE filing</span>
                   </div>
                 </div>
 
@@ -122,7 +122,7 @@ export default function PricingPageClient() {
               <CardHeader className="text-center pb-4">
                 <CardTitle className="text-2xl font-bold text-slate-900">Annual Benchmarking</CardTitle>
                 <CardDescription className="text-slate-600">
-                  Annual report due June 1 each year via BEAM Portal
+                  Annual report due November 1 each year via BEAM Portal
                 </CardDescription>
                 <div className="text-4xl font-bold text-colorado-blue-500 mt-4">
                   $2,500
@@ -337,7 +337,7 @@ export default function PricingPageClient() {
             </div>
             <div className="flex items-center justify-center gap-2">
               <CheckCircle className="h-6 w-6 text-colorado-blue-500" />
-              <span className="text-slate-700">Audit + plan filed by Dec 31, 2025</span>
+              <span className="text-slate-700">Audit + plan filed for you</span>
             </div>
             <div className="flex items-center justify-center gap-2">
               <CheckCircle className="h-6 w-6 text-colorado-blue-500" />
@@ -359,16 +359,16 @@ export default function PricingPageClient() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-8">
             <AlertTriangle className="h-12 w-12 text-red-600 mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-red-900 mb-4">The December 31, 2025 Deadline Is Real</h2>
+            <h2 className="text-3xl font-bold text-red-900 mb-4">The Deadlines Are Real</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <Card className="border-red-200 bg-white">
               <CardContent className="p-6 text-center">
                 <Clock className="h-8 w-8 text-red-600 mx-auto mb-3" />
-                <h3 className="font-bold text-red-900 mb-2">Audit + Pathway</h3>
+                <h3 className="font-bold text-red-900 mb-2">Annual Benchmarking</h3>
                 <p className="text-sm text-red-700">
-                  Energy audit, compliance plan, and pathway selection are <strong>due Dec 31, 2025</strong>.
+                  Benchmarking report and fee payment are <strong>due November 1</strong> every year.
                 </p>
               </CardContent>
             </Card>

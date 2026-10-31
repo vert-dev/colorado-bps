@@ -17,10 +17,10 @@ export default function DeadlinesPenalties() {
           <div className="mb-8 space-y-3">
             <Alert variant="destructive">
               <Clock className="h-4 w-4" />
-              <AlertTitle>Audit + Pathway Selection Deadline</AlertTitle>
+              <AlertTitle>Annual Benchmarking Deadline</AlertTitle>
               <AlertDescription>
-                Every covered building must file an ASHRAE Level 2 energy audit, compliance plan, and pathway
-                selection by <strong>December 31, 2025</strong>.
+                Every covered building must submit its benchmarking report and pay the fee by{" "}
+                <strong>November 1, annually</strong>. The reporting period opens July 1.
               </AlertDescription>
             </Alert>
 
@@ -28,7 +28,7 @@ export default function DeadlinesPenalties() {
               <AlertTriangle className="h-4 w-4" />
               <AlertTitle>Annual Benchmarking Is Separate</AlertTitle>
               <AlertDescription>
-                Annual benchmarking (June 1 each year via BEAM Portal) is its own enforced requirement and carries
+                Annual benchmarking (November 1 each year via BEAM Portal) is its own enforced requirement and carries
                 its own penalties — $500 first miss, $2,000 subsequent.
               </AlertDescription>
             </Alert>
@@ -41,9 +41,8 @@ export default function DeadlinesPenalties() {
               <div className="flex justify-between items-start relative">
                 <div className="text-center">
                   <div className="w-4 h-4 bg-amber-500 rounded-full mb-2 mx-auto"></div>
-                  <div className="text-xs font-medium">Dec 31, 2025</div>
-                  <div className="text-xs text-muted-foreground">Audit + Plan + Pathway</div>
-                  <div className="text-xs text-red-600 font-bold mt-1">URGENT</div>
+                  <div className="text-xs font-medium">Nov 1, annually</div>
+                  <div className="text-xs text-muted-foreground">Benchmarking + Fee</div>
                 </div>
                 <div className="text-center">
                   <div className="w-4 h-4 bg-blue-500 rounded-full mb-2 mx-auto"></div>
@@ -80,10 +79,7 @@ export default function DeadlinesPenalties() {
 
                     <div className="space-y-3">
                       <Badge variant="outline" className="block w-full p-3 text-left justify-start bg-colorado-blue-50">
-                        June 1, annually — Benchmarking
-                      </Badge>
-                      <Badge variant="outline" className="block w-full p-3 text-left justify-start">
-                        Dec 31, 2025 — Audit + Plan + Pathway
+                        November 1, annually: Benchmarking
                       </Badge>
                       <Badge variant="outline" className="block w-full p-3 text-left justify-start">
                         Dec 31, 2026 — Interim target

@@ -14,7 +14,7 @@ export default function Pitfalls() {
       number: 1,
       title: "Skipping benchmarking while you plan",
       description:
-        "Annual benchmarking is its own requirement. Missing the June 1 BEAM Portal submission triggers $500 / $2,000 penalties regardless of your performance pathway.",
+        "Annual benchmarking is its own requirement. Missing the November 1 BEAM Portal submission triggers $500 / $2,000 penalties regardless of your performance pathway.",
     },
     {
       number: 2,
@@ -24,9 +24,9 @@ export default function Pitfalls() {
     },
     {
       number: 3,
-      title: "Waiting until December 2025 to file the audit",
+      title: "Waiting too long to file the audit",
       description:
-        "ASHRAE Level 2 audits, compliance plan, and pathway selection are all due December 31, 2025. A 30-day audit can't be started on December 1 — start now.",
+        "ASHRAE Level 2 audits, the compliance plan, and pathway selection all take time, and the interim target is December 31, 2026. A 30-day audit can't be started the week before you need it — start now.",
     },
     {
       number: 4,

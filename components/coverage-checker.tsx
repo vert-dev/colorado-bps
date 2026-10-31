@@ -85,10 +85,10 @@ export default function CoverageChecker() {
         nextSteps: [
           "Set up Energy Star Portfolio Manager account (immediate)",
           "Register with Colorado BEAM Portal at https://co.beam-portal.org/ (immediate)",
-          "Submit annual benchmarking report by August 1 each year (with $100 fee)",
-          "Complete energy audit by December 31, 2025",
-          "Select compliance pathway (Energy Efficiency, GHG Reduction, or Standard %) by December 31, 2025",
-          "File compliance plan with Colorado Energy Office by December 31, 2025",
+          "Submit annual benchmarking report by November 1 each year (with $100 fee)",
+          "Complete an energy audit",
+          "Select compliance pathway (Energy Efficiency, GHG Reduction, or Standard %)",
+          "File compliance plan with Colorado Energy Office",
           "Meet interim target (7% reduction) by December 31, 2026",
           "Meet final target (20% reduction) by December 31, 2030",
         ],
@@ -187,12 +187,8 @@ export default function CoverageChecker() {
                     <p className="text-sm mt-1">{result.details}</p>
 
                     <div className="mt-3 space-y-2">
-                      <div className="text-xs bg-red-50 text-red-700 p-3 rounded">
-                        <strong>Critical First Deadline: December 31, 2025</strong>
-                        <p className="mt-1">Complete energy audit, select compliance pathway (Energy Efficiency, GHG Reduction, or Standard % Reduction), and file compliance plan.</p>
-                      </div>
                       <div className="text-xs bg-orange-50 text-orange-700 p-3 rounded">
-                        <strong>Annual Benchmarking: August 1 each year</strong>
+                        <strong>Annual Benchmarking: November 1 each year</strong>
                         <p className="mt-1">Submit energy data via Portfolio Manager to BEAM Portal with $100 fee. Penalties: $500 (first failure), $2,000 (subsequent).</p>
                       </div>
                       <div className="text-xs bg-yellow-50 text-yellow-700 p-3 rounded">
@@ -279,15 +275,9 @@ export default function CoverageChecker() {
                     <div className="text-sm">
                       <p className="font-semibold text-slate-800 mb-1">Early Compliance Success:</p>
                       <p className="text-slate-700">
-                        Building owners who start early have time to evaluate all three compliance pathways, secure the best energy auditors, and plan capital improvements strategically. Those who wait until late 2025 face rushed decisions, limited contractor availability, and higher costs.
+                        Building owners who start early have time to evaluate all three compliance pathways, secure the best energy auditors, and plan capital improvements strategically. Those who wait face rushed decisions, limited contractor availability, and higher costs.
                       </p>
                     </div>
-                  </div>
-                  <div className="bg-red-100 border border-red-300 p-3 rounded text-sm">
-                    <p className="font-semibold text-red-800 mb-1">⚠️ Critical: December 31, 2025 Deadline</p>
-                    <p className="text-red-700">
-                      Missing the December 31, 2025 audit and pathway selection deadline may result in penalties or forced pathway assignment. Start your energy audit in early 2025 to ensure timely completion.
-                    </p>
                   </div>
                 </div>
 
@@ -329,8 +319,7 @@ export default function CoverageChecker() {
             <div className="bg-red-50 p-4 rounded-lg border border-red-200">
               <h4 className="font-semibold text-red-800 mb-2">Key Deadlines</h4>
               <ul className="text-red-700 space-y-1 text-left">
-                <li>• Aug 1 annually: Benchmarking ($100 fee)</li>
-                <li>• Dec 31, 2025: Audit + pathway selection</li>
+                <li>• Nov 1 annually: Benchmarking ($100 fee)</li>
                 <li>• Dec 31, 2026: Interim target (7%)</li>
                 <li>• Dec 31, 2030: Final target (20%)</li>
               </ul>

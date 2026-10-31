@@ -34,11 +34,11 @@ export default function CoverageTiers() {
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-colorado-blue-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Energy audit + compliance plan due December 31, 2025</span>
+                    <span>Energy audit + compliance plan</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-colorado-blue-400 rounded-full mt-2 flex-shrink-0"></span>
-                    <span>Select compliance pathway by December 31, 2025</span>
+                    <span>Select a compliance pathway</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <span className="w-1.5 h-1.5 bg-colorado-blue-400 rounded-full mt-2 flex-shrink-0"></span>
@@ -170,7 +170,7 @@ export default function CoverageTiers() {
                 <li className="flex items-start space-x-2">
                   <span className="w-1.5 h-1.5 bg-colorado-blue-600 rounded-full mt-2 flex-shrink-0"></span>
                   <span>
-                    <strong>Deadline:</strong> Must select pathway by December 31, 2025
+                    <strong>Change window:</strong> Pathway can be changed without additional documentation until November 1, 2028
                   </span>
                 </li>
                 <li className="flex items-start space-x-2">

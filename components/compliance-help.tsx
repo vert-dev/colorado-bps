@@ -41,7 +41,7 @@ export default function ComplianceHelp() {
           </p>
           <div className="mt-4 bg-red-50 border border-red-200 p-4 rounded-lg max-w-2xl mx-auto">
             <p className="text-red-800 font-semibold text-sm">
-              ⏰ Time-Sensitive: Energy audits, compliance plans, and pathway selection are due December 31, 2025
+              ⏰ Time-Sensitive: Benchmarking reports and fees are due every November 1
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function ComplianceHelp() {
               </div>
               <p className="text-sm text-colorado-blue-600 mb-2">
                 "We selected the GHG Reduction pathway, stacked Xcel rebates with the federal 45L credit, and filed our
-                compliance plan well ahead of the December 2025 deadline."
+                compliance plan well ahead of the interim target."
               </p>
               <p className="text-xs text-colorado-blue-500">— Property Manager, 90,000 total sq ft</p>
             </div>
@@ -129,7 +129,7 @@ export default function ComplianceHelp() {
                 </div>
               </div>
               <p className="text-sm text-slate-600">
-                <strong>Deadline:</strong> Energy audit, compliance plan, and pathway selection due December 31, 2025.
+                <strong>Deadline:</strong> Benchmarking report and fee due November 1 each year.
                 Interim target due December 31, 2026; final target December 31, 2030.
               </p>
             </div>

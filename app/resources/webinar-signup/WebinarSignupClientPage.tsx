@@ -138,7 +138,7 @@ export default function WebinarSignupClientPage() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Calendar className="w-5 h-5 text-blue-600" />
-                  <span className="text-slate-700">Next Session: January 15, 2025</span>
+                  <span className="text-slate-700">Live webinar</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-blue-600" />

@@ -18,10 +18,10 @@ export default function KeyDeadlines() {
         <div className="space-y-4 mb-12">
           <Alert variant="destructive">
             <AlertTriangle className="h-4 w-4" />
-            <AlertTitle>Critical Deadline: December 31, 2025</AlertTitle>
+            <AlertTitle>Annual Deadline: November 1</AlertTitle>
             <AlertDescription>
-              Complete energy audit, select compliance pathway, and file compliance plan by <strong>December 31, 2025</strong>.
-              This is mandatory for all buildings ≥50k sqft and determines your path to 2026 & 2030 targets.
+              Benchmarking report and fee payment are due <strong>November 1, annually</strong>; the reporting period
+              opens July 1. Late reports and fees are subject to penalties.
             </AlertDescription>
           </Alert>
 
@@ -29,7 +29,7 @@ export default function KeyDeadlines() {
             <Clock className="h-4 w-4" />
             <AlertTitle>Annual Benchmarking Required</AlertTitle>
             <AlertDescription>
-              Annual benchmarking reports due <strong>August 1 each year</strong> with $100/building fee.
+              Annual benchmarking reports come with a $100/building fee.
               Penalties: $500 (first occurrence), $2,000 (subsequent occurrences).
             </AlertDescription>
           </Alert>
@@ -41,7 +41,7 @@ export default function KeyDeadlines() {
           <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-slate-200"></div>
 
           <div className="space-y-8">
-            {/* 2024-2025: Benchmarking & Planning */}
+            {/* Annual benchmarking */}
             <div className="relative flex items-center">
               <div className="flex-1 pr-8">
                 <Card className="p-6 border-blue-200 bg-blue-50">
@@ -49,9 +49,9 @@ export default function KeyDeadlines() {
                     <Calendar className="w-5 h-5 text-blue-600" />
                     <Badge className="bg-blue-100 text-blue-800">Ongoing</Badge>
                   </div>
-                  <h3 className="font-semibold text-slate-800 mb-2">2024-2025: Benchmarking & Planning Phase</h3>
+                  <h3 className="font-semibold text-slate-800 mb-2">Annual Benchmarking</h3>
                   <p className="text-slate-700 mb-2">
-                    <strong>Annual Deadline:</strong> August 1 each year
+                    <strong>Annual Deadline:</strong> November 1 each year (reporting period opens July 1)
                   </p>
                   <div className="text-sm text-slate-600 space-y-1">
                     <p>
@@ -73,41 +73,11 @@ export default function KeyDeadlines() {
               <div className="flex-1 pl-8"></div>
             </div>
 
-            {/* December 2025: Audit & Pathway Selection */}
-            <div className="relative flex items-center">
-              <div className="flex-1 pr-8"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-red-500 rounded-full border-4 border-white"></div>
-              <div className="flex-1 pl-8">
-                <Card className="p-6 border-red-200 bg-red-50">
-                  <div className="flex items-center gap-3 mb-3">
-                    <AlertTriangle className="w-5 h-5 text-red-600" />
-                    <Badge variant="destructive">Critical Deadline</Badge>
-                  </div>
-                  <h3 className="font-semibold text-slate-800 mb-2">December 31, 2025: Audit & Pathway Selection</h3>
-                  <p className="text-slate-700 mb-2">
-                    <strong>Deadline:</strong> December 31, 2025
-                  </p>
-                  <div className="text-sm text-slate-600 space-y-1">
-                    <p>
-                      <strong>Requirements:</strong> Complete energy audit, select compliance pathway, file compliance plan
-                    </p>
-                    <p>
-                      <strong>3 Pathway Options:</strong> Energy Efficiency, GHG Reduction, or Standard % Reduction
-                    </p>
-                    <p className="text-red-600 font-semibold">
-                      This determines your interim and final targets
-                    </p>
-                    <p>
-                      <strong>Recommended:</strong> Start audit process in early 2025
-                    </p>
-                  </div>
-                </Card>
-              </div>
-            </div>
-
             {/* December 2026: Interim Target */}
             <div className="relative flex items-center">
-              <div className="flex-1 pr-8">
+              <div className="flex-1 pr-8"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-white"></div>
+              <div className="flex-1 pl-8">
                 <Card className="p-6 border-yellow-200 bg-yellow-50">
                   <div className="flex items-center gap-3 mb-3">
                     <Clock className="w-5 h-5 text-yellow-600" />
@@ -130,15 +100,11 @@ export default function KeyDeadlines() {
                   </div>
                 </Card>
               </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-yellow-500 rounded-full border-4 border-white"></div>
-              <div className="flex-1 pl-8"></div>
             </div>
 
             {/* June 2027: Penalties Begin */}
             <div className="relative flex items-center">
-              <div className="flex-1 pr-8"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-red-500 rounded-full border-4 border-white"></div>
-              <div className="flex-1 pl-8">
+              <div className="flex-1 pr-8">
                 <Card className="p-6 border-red-200 bg-red-50">
                   <div className="flex items-center gap-3 mb-3">
                     <AlertTriangle className="w-5 h-5 text-red-600" />
@@ -161,11 +127,15 @@ export default function KeyDeadlines() {
                   </div>
                 </Card>
               </div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-red-500 rounded-full border-4 border-white"></div>
+              <div className="flex-1 pl-8"></div>
             </div>
 
             {/* December 2030: Final Target */}
             <div className="relative flex items-center">
-              <div className="flex-1 pr-8">
+              <div className="flex-1 pr-8"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-blue-500 rounded-full border-4 border-white"></div>
+              <div className="flex-1 pl-8">
                 <Card className="p-6 border-colorado-blue-200 bg-colorado-blue-50">
                   <div className="flex items-center gap-3 mb-3">
                     <Calendar className="w-5 h-5 text-colorado-blue-600" />
@@ -188,8 +158,6 @@ export default function KeyDeadlines() {
                   </div>
                 </Card>
               </div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-colorado-blue-500 rounded-full border-4 border-white"></div>
-              <div className="flex-1 pl-8"></div>
             </div>
           </div>
         </div>
@@ -202,16 +170,15 @@ export default function KeyDeadlines() {
               <div>
                 <p className="font-semibold text-colorado-blue-700 mb-2">Annual (2024+)</p>
                 <ul className="space-y-1 text-slate-600">
-                  <li>• Benchmark by Aug 1</li>
+                  <li>• Benchmark by Nov 1</li>
                   <li>• Pay $100 fee</li>
                   <li>• Submit to CEO</li>
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-colorado-red-700 mb-2">2025-2026</p>
+                <p className="font-semibold text-colorado-red-700 mb-2">Through 2026</p>
                 <ul className="space-y-1 text-slate-600">
-                  <li>• Complete audit (by Dec 31, 2025)</li>
-                  <li>• Select pathway</li>
+                  <li>• Review your target and pathway</li>
                   <li>• Meet 7% target (by Dec 31, 2026)</li>
                 </ul>
               </div>

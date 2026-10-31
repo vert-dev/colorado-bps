@@ -9,8 +9,8 @@ COLORADO BPS OVERVIEW (HB 21-1286, 2021):
 - Administered by Colorado Energy Office (CEO)
 
 KEY DEADLINES:
-- August 1 annually: Benchmarking report + $100 fee (penalties: $500 first, $2,000 subsequent)
-- December 31, 2025: Complete energy audit, select pathway, file compliance plan (CRITICAL)
+- July 1 annually: Benchmarking reporting period opens
+- November 1 annually: Benchmarking report + $100 fee due (penalties: $500 first, $2,000 subsequent)
 - December 31, 2026: Interim target (7% reduction from 2021 baseline)
 - June 1, 2027: Monthly interim penalties begin if non-compliant
 - December 31, 2030: Final target (20% reduction from 2021 baseline)
@@ -30,9 +30,9 @@ THREE COMPLIANCE PATHWAYS:
 COMPLIANCE MODEL:
 - Set up Energy Star Portfolio Manager account
 - Register with BEAM Portal (https://co.beam-portal.org/)
-- Submit annual benchmarking by August 1 ($100 fee)
-- Complete energy audit by December 31, 2025
-- Select compliance pathway by December 31, 2025
+- Submit annual benchmarking by November 1 ($100 fee)
+- Complete an energy audit
+- Select a compliance pathway
 - File compliance plan with Colorado Energy Office
 - Meet interim and final targets
 
@@ -58,11 +58,11 @@ function getSimpleResponse(message: string): string | null {
   }
 
   if (lowerMessage.includes("deadline")) {
-    return "Key Colorado BPS deadlines: December 31, 2025 (energy audit + pathway selection - CRITICAL), December 31, 2026 (interim 7% target), December 31, 2030 (final 20% target). Annual benchmarking due August 1 each year with $100 fee. Monthly penalties begin June 2027 (interim) and June 2031 (final) if non-compliant!"
+    return "Key Colorado BPS deadlines: annual benchmarking report and fee due November 1 (reporting period opens July 1), December 31, 2026 (interim 7% target), December 31, 2030 (final 20% target). Benchmarking carries a $100 fee. Monthly penalties begin June 2027 (interim) and June 2031 (final) if non-compliant!"
   }
 
   if (lowerMessage.includes("pathway") || lowerMessage.includes("pathways")) {
-    return "Colorado BPS offers 3 compliance pathways: (1) Energy Efficiency - reduce Site EUI by 7%/20%, (2) GHG Reduction - reduce emissions by 7%/20%, (3) Standard % Reduction - fixed 13%/29% reductions (only if baseline >29% above target). You must select your pathway by December 31, 2025!"
+    return "Colorado BPS offers 3 compliance pathways: (1) Energy Efficiency - reduce Site EUI by 7%/20%, (2) GHG Reduction - reduce emissions by 7%/20%, (3) Standard % Reduction - fixed 13%/29% reductions (only if baseline >29% above target). You can change your pathway without additional documentation until November 1, 2028."
   }
 
   if (
@@ -75,7 +75,7 @@ function getSimpleResponse(message: string): string | null {
     if (sizeMatch) {
       const size = Number.parseInt(sizeMatch[1].replace(",", ""))
       if (size >= 50000) {
-        return `A ${size.toLocaleString()} sq ft building IS covered by Colorado BPS. All buildings ≥50k sqft have the same requirements: annual benchmarking (Aug 1), energy audit by Dec 31 2025, pathway selection by Dec 31 2025, interim target (7%) by Dec 31 2026, final target (20%) by Dec 31 2030. Monthly penalties if non-compliant!`
+        return `A ${size.toLocaleString()} sq ft building IS covered by Colorado BPS. All buildings ≥50k sqft have the same requirements: annual benchmarking (Nov 1), interim target (7%) by Dec 31 2026, final target (20%) by Dec 31 2030. Monthly penalties if non-compliant!`
       } else {
         return `Buildings under 50,000 sq ft are not covered by Colorado BPS. You're exempt from compliance requirements!`
       }
@@ -91,7 +91,7 @@ function getSimpleResponse(message: string): string | null {
   }
 
   if (lowerMessage.includes("audit") || lowerMessage.includes("energy audit")) {
-    return "Energy audits are required by December 31, 2025 for all covered buildings (≥50k sqft). Cost: $5,000-$25,000. The audit determines your baseline energy use and helps you select the best compliance pathway. Start early - auditors will be booked in late 2025!"
+    return "An energy audit helps you pick the best compliance pathway for your building (≥50k sqft). Cost: $5,000-$25,000. The audit identifies your baseline energy use and the measures to reach your targets. Start early - auditors book up!"
   }
 
   if (lowerMessage.includes("beam") || lowerMessage.includes("portal")) {
@@ -107,7 +107,7 @@ function getVariedFallbackResponse(message: string, conversationHistory: any[]):
 
   // Handle specific company/service questions
   if (lowerMessage.includes("vert") && !lowerMessage.includes("convert")) {
-    return "Vert Energy Group is a leading compliance platform company specializing in Colorado BPS requirements. We help building owners navigate pathway selection, complete energy audits, and meet the December 2025 critical deadline. What specific aspect of Colorado BPS compliance can I help you understand better?"
+    return "Vert Energy Group is a leading compliance platform company specializing in Colorado BPS requirements. We help building owners navigate pathway selection, complete energy audits, and meet the annual benchmarking and performance target deadlines. What specific aspect of Colorado BPS compliance can I help you understand better?"
   }
 
   if (lowerMessage.includes("sign") && (lowerMessage.includes("up") || lowerMessage.includes("me"))) {
@@ -116,21 +116,21 @@ function getVariedFallbackResponse(message: string, conversationHistory: any[]):
 
   if (lowerMessage.includes("why") || lowerMessage.includes("huh") || lowerMessage.includes("what")) {
     const responses = [
-      "Let me help clarify! Colorado BPS (HB 21-1286) requires buildings ≥50k sqft to reduce energy use by 7% (2026) and 20% (2030). You choose 1 of 3 compliance pathways. The critical first deadline is December 31, 2025 for energy audit + pathway selection. What would you like to know?",
+      "Let me help clarify! Colorado BPS (HB 21-1286) requires buildings ≥50k sqft to reduce energy use by 7% (2026) and 20% (2030). You choose 1 of 3 compliance pathways. Benchmarking reports and fees are due every November 1. What would you like to know?",
       "I'm here to guide you through Colorado BPS compliance! The law requires annual benchmarking ($100 fee) and performance targets (7% by 2026, 20% by 2030). Monthly penalties start June 2027 if you miss the interim target. What's your building size?",
-      "Good question! Colorado BPS applies to ALL buildings ≥50k sqft - no tier system. You must complete an energy audit, select a compliance pathway (Energy Efficiency, GHG Reduction, or Standard %), and file a plan by December 31, 2025. Which aspect interests you?",
-      "Let me explain! Colorado's Building Performance Standard requires buildings ≥50k sqft to reduce energy use or emissions. First step: energy audit by Dec 31, 2025. Then choose your pathway and start working toward the 7% interim target. What's your building type and size?",
+      "Good question! Colorado BPS applies to ALL buildings ≥50k sqft - no tier system. You must complete an energy audit, select a compliance pathway (Energy Efficiency, GHG Reduction, or Standard %), and file a plan. Which aspect interests you?",
+      "Let me explain! Colorado's Building Performance Standard requires buildings ≥50k sqft to reduce energy use or emissions. First step: an energy audit. Then choose your pathway and start working toward the 7% interim target. What's your building type and size?",
     ]
     return responses[historyLength % responses.length]
   }
 
   // General fallback responses with variety
   const fallbackResponses = [
-    "I specialize in Colorado BPS compliance! I can help you understand the December 2025 deadline, 3 compliance pathways, benchmarking requirements, and penalties. What's your building's square footage? That'll help me give you specific guidance.",
-    "As your Colorado BPS compliance expert, I'm here to help! The key things most building owners need to know are: December 31, 2025 critical deadline (audit + pathway), annual benchmarking ($100 fee), and monthly penalties starting June 2027. Which interests you most?",
+    "I specialize in Colorado BPS compliance! I can help you understand the deadlines, 3 compliance pathways, benchmarking requirements, and penalties. What's your building's square footage? That'll help me give you specific guidance.",
+    "As your Colorado BPS compliance expert, I'm here to help! The key things most building owners need to know are: annual benchmarking due November 1 ($100 fee), and monthly penalties starting June 2027. Which interests you most?",
     "Let me guide you through Colorado BPS compliance! Buildings ≥50k sqft must choose 1 of 3 pathways: Energy Efficiency, GHG Reduction, or Standard % Reduction. Tell me about your property - what type and size is it?",
-    "I'm your Colorado Building Performance Standard assistant! Whether you need help with pathway selection, understanding penalty risks, or meeting the December 2025 deadline, I've got you covered. What's your main concern?",
-    "Great to meet you! I help building owners navigate Colorado's BPS requirements efficiently. The critical first step is completing your energy audit and selecting a pathway by December 31, 2025. What would you like to explore first - your building's coverage, deadlines, or pathways?",
+    "I'm your Colorado Building Performance Standard assistant! Whether you need help with pathway selection, understanding penalty risks, or meeting your deadlines, I've got you covered. What's your main concern?",
+    "Great to meet you! I help building owners navigate Colorado's BPS requirements efficiently. The first step is completing your energy audit and selecting a pathway. What would you like to explore first - your building's coverage, deadlines, or pathways?",
   ]
 
   return fallbackResponses[historyLength % fallbackResponses.length]
