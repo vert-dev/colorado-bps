@@ -21,7 +21,7 @@ export default function HelpDeskHero() {
         <div className="container mx-auto px-4 max-w-7xl relative z-10">
           <div className="mb-8 flex justify-start">
             <div className="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm shadow-lg">
-              Early Adopter Incentives Open July 1st, 2025
+              Help with Building Performance Colorado compliance
             </div>
           </div>
 

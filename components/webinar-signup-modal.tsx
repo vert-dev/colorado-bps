@@ -76,7 +76,7 @@ export default function WebinarSignupModal({ isOpen, onClose }: WebinarSignupMod
         <div className="space-y-4 mb-6">
           <div className="flex items-center gap-3 text-sm text-slate-600">
             <Calendar className="w-4 h-4" />
-            <span>Next Session: January 15, 2025</span>
+            <span>Live webinar</span>
           </div>
           <div className="flex items-center gap-3 text-sm text-slate-600">
             <Clock className="w-4 h-4" />

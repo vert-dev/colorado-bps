@@ -1,10 +1,10 @@
 // Run after `next build`:  npm run check:hero-deadline
 //
 // Guards against past deadline text and the retired benchmarking date coming back.
-//   1. Built home page and /pricing page text, plus the chat route source
-//      (app/api/chat/route.ts): any calendar date earlier than today
+//   1. Built home page and /pricing page text, the chat route source, and every
+//      .tsx under app/ and components/: any calendar date earlier than today
 //      (America/Chicago) that sits next to deadline words ("deadline", "due",
-//      "critical", "by", "before", "until") fails. History such as "began
+//      "critical", "by", "before", "until", "open(s)", "start(s)", "session") fails. History such as "began
 //      January 1, 2024" is not next to those words and passes.
 //   2. The same three artifacts, and every .tsx under app/ and components/,
 //      must not contain the retired claims: a December 2025 audit/pathway
@@ -42,7 +42,7 @@ const artifacts = [
 
 const monthRe = "(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|June?|July?|Aug(?:ust)?|Sep(?:t(?:ember)?)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\\.?";
 const dateRe = new RegExp(`\\b${monthRe}(?:\\s+(\\d{1,2})(?:st|nd|rd|th)?)?,?\\s+(20\\d{2})\\b`, "g");
-const near = /(deadline|due|critical|\bby\b|before|until|next session)/i;
+const near = /(deadline|due|critical|\bby\b|before|until|next session|\bopens?\b|\bstarts?\b|session)/i;
 
 function isoEnd(m, d, y) {
   const mi = MONTHS.findIndex((n) => n.startsWith(m.slice(0, 3).toLowerCase()));
@@ -51,7 +51,16 @@ function isoEnd(m, d, y) {
   return `${y}-${String(mi + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
-for (const [label, text] of artifacts) {
+function walk(dir, out = []) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) walk(p, out);
+    else if (/\.tsx?$/.test(e.name) && !p.endsWith(path.join("components", "hero-masterclass.tsx"))) out.push(p);
+  }
+  return out;
+}
+const sources = [...walk(path.join(root, "app")), ...walk(path.join(root, "components"))].map((p) => [path.relative(root, p), fs.readFileSync(p, "utf8")]);
+for (const [label, text] of [...artifacts, ...sources]) {
   for (const x of text.matchAll(dateRe)) {
     const iso = isoEnd(x[1], x[2], x[3]);
     if (iso >= today) continue;
@@ -69,15 +78,6 @@ const retired = [
   [/Aug(?:ust|\.)?\s+1(?!\d)/i, "August 1 benchmarking date"],
   [/(?:benchmark\w*[^.]{0,80}|BEAM Portal[^.]{0,40})\bJune 1(?!\d|,\s*20(?:24|25|27|31))|\bJune 1(?!\d|,\s*20(?:24|25|27|31))[^.]{0,60}benchmark/i, "June 1 benchmarking date"],
 ];
-function walk(dir, out = []) {
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    const p = path.join(dir, e.name);
-    if (e.isDirectory()) walk(p, out);
-    else if (/\.tsx?$/.test(e.name) && !p.endsWith(path.join("components", "hero-masterclass.tsx"))) out.push(p);
-  }
-  return out;
-}
-const sources = [...walk(path.join(root, "app")), ...walk(path.join(root, "components"))].map((p) => [path.relative(root, p), fs.readFileSync(p, "utf8")]);
 for (const [label, text] of [...artifacts, ...sources]) {
   for (const [re, what] of retired) {
     const g = new RegExp(re.source, re.flags.includes("g") ? re.flags : re.flags + "g");
